@@ -1,0 +1,11 @@
+Copyright (c) 2026 Dejan Jankovic
+All rights reserved.
+
+All code, images, assets, and other files created or modified by me
+may not be used, copied, modified, or distributed without explicit permission from the author.
+
+This license applies to all files in this repository except for any third-party code 
+licensed under separate terms (for example, Bootstrap code under the MIT License).
+
+For the Bootstrap code included in this project, please refer to the original [MIT License](bootstrap/LICENSE).
+
