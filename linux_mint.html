@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Istorija Linuxa: Saznajte kako je Linus Torvalds stvorio Linux kernel, povezanost sa GNU projektom, razvoj distribucija i uticaj Linuxa u modernom svetu.">
+    <meta name="author" content="Dejan Janković" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <title>Linux Mint</title>
+</head>
+<body class="linux_mint" id="top">
+    <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase sticky-top" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html#page-top">Start Linux</a>
+                    <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#page-top">Home</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Commands</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#about">About</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#contact">Contact</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="linux_&_facts.html">Linux Facts</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="distribucije.html">Distributions</a></li>
+                            <li class="nav-item dropdown mx-0 mx-lg-1">
+                            <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded" href="#" id="navbarDistros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Distribution Guide
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDistros">
+                                <li><a class="dropdown-item ubuntu" href="ubuntu.html">Ubuntu</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item linux_mint" href="linux_mint.html">Linux Mint</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item zorin_os" href="zorin_os.html">Zorin OS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item elementary" href="elementary.html">elementary OS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item pop" href="pop.html">PoP!_OS</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+        <!-- End Navigation-->
+        <!-- Header-->
+        <header class="text-center fs-1 mt-5">
+            <h1 class="fs-1 fw-semibold text-uppercase">Linux Mint</h1>
+            <figure class="text-center">
+                <blockquote class="blockquote">   
+                    <p class="fs-5 fst-italic text-uppercase fw-bold" style="color: #87CF3E;">"Elegantna i pristupačna Linux distribucija za svakoga"</p>
+                </blockquote>  
+            </figure>
+        </header>
+        <!-- End Header-->
+        <!--Tabs/Pane-->
+        <div class="container mt-5">
+            <div class="row">
+                <aside class="col-4">
+                    <div class="nav nav-pills flex-column fs-5" id="linux_mint-tabs" role="tablist">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#uvod">
+                            <i class="bi bi-info-circle me-3"></i>
+                            Uvod
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#instalacija">
+                            <i class="bi bi-gear-fill me-3"></i>
+                            Instalacija
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#verzije">
+                            <i class="bi bi-folder me-3"></i>
+                            Verzije
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#prednosti">
+                            <i class="bi bi-check-circle me-3"></i>
+                            Prednosti
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sistemski_zahtevi">
+                            <i class="bi bi-laptop me-3"></i>
+                            Sistemski zahtevi
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#okruženje">
+                            <i class="bi bi-display me-3"></i>
+                            Radno okruženje
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#softwer">
+                            <i class="bi bi-box-seam me-3"></i>
+                            Softwer i aplikacije
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#bezbednost">
+                            <i class="bi bi-shield-check me-3"></i>
+                            Bezbednost i Ažuriranja
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#zajednica">
+                            <i class="bi bi-chat-dots me-3"></i>
+                            Zajednica i podrška
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pitanja">
+                            <i class="bi bi-question-circle me-3"></i>
+                            Česta pitanja
+                        </button>
+                    </div>
+                </aside>
+                <main class="col-8">
+                    <div class="tab-content">
+
+                        <div class="tab-pane fade show active mb-5" id="uvod">
+                            <h4>O SAMOJ DISTRIBUCIJI</h4>
+                            <p>
+                                <strong>Linux Mint</strong> je distribucija koja je shvatila jednu jednostavnu stvar - korisnici žele sistem koji radi, a ne novi hobi. Dok mnoge Linux distribucije eksperimentišu sa novim idejama ili guraju tehnološke granice, 
+                                Mint je ostao veran principu jednostavnosti i pouzdanosti. Rezultat je sistem koji se oseća prirodno, elegantno i, što je najvažnije, ne komplikuje stvari tamo gde ne treba.
+                                <br /><br />
+                                <strong>Nastao 2006</strong>. godine, Linux Mint je brzo stekao reputaciju kao idealan izbor za korisnike koji prelaze sa Windowsa. Razlog je očigledan - interfejs je poznat, sve radi odmah nakon instalacije, 
+                                a nema nepotrebnog učenja novih koncepata samo zbog toga što je "Linux drugačiji". Mint je zasnovan na Ubuntu-u (što znači da deli istu stabilnu osnovu), ali dodaje vlastiti pristup dizajnu i korisničkom iskustvu kroz Cinnamon desktop okruženje.
+                                <br /><br />
+                                Ono što Mint čini posebnim jeste njegova filozofija kompletnosti. Kada instaliraš Mint, dobijaš sistem spreman za upotrebu - kodeci za muziku i video već su tu, osnovne aplikacije instalirane, drajveri automatski podešeni. 
+                                Nema zbunjujućeg procesa traženja šta još treba instalirati ili kako podesiti osnovne stvari. Tim iza Minta je shvatio da većina ljudi želi da koristi računar, a ne da ga podešava.
+                                <br /><br />
+                                Linux Mint ima ogromnu globalnu zajednicu i odličnu dokumentaciju na više jezika. Forumi su aktivni, vodiči jasni, a pomoć uvek dostupna. Mint se redovno ažurira, ali fokus je na stabilnosti - nove verzije dolaze samo kada su temeljno testirane, 
+                                što znači da nećeš imati neprijatna iznenađenja nakon update-a.
+                                <br /><br />
+                                Mint je svestran - radi na starijim računarima, odličan je za svakodnevni rad, gledanje filmova, surfovanje internetom, programiranje ili učenje. Zahvaljujući Ubuntu osnovi, imaš pristup ogromnom broju aplikacija i alata. 
+                                A najbolje od svega - Mint poštuje tvoju privatnost i ne prati šta radiš.
+                                <br /><br />
+                                Ako tražiš Linux distribuciju koja ne komplikuje, koja izgleda lepo i koja ti omogućava da uradiš ono što si naumio bez prepreka - Linux Mint je odličan izbor. Na ovoj stranici ćeš pronaći sve što ti treba da počneš sa Mint-om, bez straha i bez komplikacija.
+                            </p>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="instalacija">
+                            <h4>KAKO INSTALIRATI MINT - kompletan vodič od početka do kraja</h4>
+                            <p>
+                                Ako želiš da isprobaš Linux Mint ili da pređeš sa Windowsa na sistem koji je elegantan, stabilan i potpuno besplatan, u nastavku ću objasniti ceo proces instalacije korak po korak, bez komplikovanja i tehničkih izraza koje niko ne razume.
+                            </p>
+                            <br />
+                            <h4>1. Odlazak na zvanični Linux Mint sajt</h4>
+                            <p>
+                                Prvi korak je da odeš na zvanični Linux Mint sajt. U internet pregledač (Chrome, Firefox, Edge...) ukucaj <strong>https://linuxmint.com</strong>. Kada se stranica učita, klikni
+                                na <strong>Download</strong> u meniju. Videćeš nekoliko verzija Minta - za početnike je najbolja <strong>Cinnamon Edition</strong>, koja ima moderan i intuitivan interfejs sličan Windowsu.
+                            </p>
+                            <hr>
+                            <h4>2. Preuzimanje Linux Mint ISO fajla</h4>
+                            <p>
+                                Izaberi <strong>Cinnamon Edition</strong> i klikni na <strong>Download</strong>. Bićeš preusmeren na stranicu sa mirror serverima - izaberi onaj koji je najbliži tvojoj lokaciji (za Srbiju biraj neki iz Evrope). Klikni na link i preuzimanje će početi. 
+                                Fajl je veličine oko 2.5 - 3 GB, pa može potrajati nekoliko minuta u zavisnosti od brzine interneta. <br><br> <strong>ISO fajl je zapravo "slika" instalacionog diska Linux Minta</strong>.
+                            </p>
+                            <hr>
+                            <h4>3. Preuzimanje programa Balena Etcher</h4>
+                            <p>
+                                Da bi mogao da instaliraš Linux Mint, potreban ti USB fleš (minimum 8GB) i program koji će ISO fajl prebaciti na USB tako da on postane instalacioni. Jedan od najjednostavnijih programa za to je <strong>Balena Etcher</strong>.
+                                Otvori sajt <strong>https://balena.io/etcher/</strong>. Klikni na <strong>Download Etcher</strong> i preuzmi verziju za svoj operativni sistem (Windows, macOS ili Linux). Nakon preuzimanja, instaliraj program kao i bilo koji drugi.
+                            </p>
+                            <hr>
+                            <h4>4. Pravljenje bootabilnog USB-a</h4>
+                            <p>
+                                Uključi USB fleš u računar i pokreni Balena Etcher. Postupak je veoma jednostavan:
+                            </p>
+                            <ul>
+                                <li>Klikni na <strong>Flash from file</strong> i izaberi Linux Mint ISO fajl koji si preuzeo</li>
+                                <li>Klikni na <strong>Select target</strong> i izaberi svoj USB fleš</li>
+                                <li>Klikni na <strong>Flash</strong></li>
+                            </ul>
+                            <p>
+                                Sačekaj da se proces završi. Može potrajati nekoliko minuta. Kada je gotovo, USB je spreman za instalaciju Linux Minta.
+                            </p>
+                            <hr>
+                            <h4>5. Pokretanje računara sa USB-a</h4>
+                            <p>
+                                Sada je potrebno da restartuješ računar i da ga podesiš da se pokrene sa USB-a. Tokom paljenja računara, pritiskaj taster kao što su <strong>F12, F10, ESC ili DEL</strong> (zavisi od proizvođača).
+                                Otvoriće se meni za izbor uređaja za pokretanje. Izaberi USB fleš i potvrdi.
+                            </p>
+                            <hr>
+                            <h4>6. Pokretanje Linux Mint instalacije</h4>
+                            <p>
+                                Nakon toga će se pojaviti Linux Mint ekran. Imaćeš dve opcije:
+                            </p>
+                            <ul>
+                                <li><strong>Start Linux Mint</strong></li>
+                                <li><strong>Install Linux Mint</strong></li>
+                            </ul>
+                            <p>
+                               Možeš prvo da izabereš Start Linux Mint da probaš sistem bez instalacije (sve radi sa USB-a, ništa se ne menja na računaru). Ako ti se svidi, 
+                               jednostavno klikni na ikonicu Install Linux Mint koja se nalazi na desktopu. Zatim sledi nekoliko jednostavnih koraka:
+                            </p>
+                            <ul>
+                                <li>Izaberi jezik</li>
+                                <li>Izaberi raspored tastature</li>
+                                <li>Možeš čekirati opciju za instalaciju multimedijskih kodeka (preporučuje se)</li>
+                            </ul>
+                            <hr>
+                            <h4>7. Izbor diska i instalacija sistema</h4>
+                            <p>
+                                U sledećem koraku biraš gde će se Linux Mint instalirati. Ako želiš da orišeš sve sa diska i koristiš samo Mint, izaberi opciju:
+                            </p>
+                            <ul>
+                                <li><strong>Erase disk and install Linux Mint</strong></li>
+                            </ul>
+                            <p>
+                                Ako imaš Windows i želiš <strong>dual boot</strong>, Linux Mint će to automatski prepoznati i ponuditi opciju instalacije pored Windowsa. Potvrdi izbor i nastavi dalje.
+                            </p>
+                            <hr>
+                            <h4>8. Podešavanje korisnika</h4>
+                            <p>
+                                Sada unosiš:
+                            </p>
+                            <ul>
+                                <li><strong>Svoje ime</strong></li>
+                                <li><strong>Ime računara</strong></li>
+                                <li><strong>Korisničko ime</strong></li>
+                                <li><strong>Lozinku</strong></li>
+                            </ul>
+                            <p>
+                                Izaberi da li želiš automatsko prijavljivanje ili unos lozinke prilikom svakog paljenja računara.
+                            </p>
+                            <hr>
+                            <h4>9. Završetak instalacije</h4>
+                            <p>
+                                Kada sve to završiš, instalacija će početi. Ceo proces traje oko 10 - 20 minuta. kada se instalacija završi, bićeš obavešten da možeš da restartuješ računar.
+                                Izvadi USB fleš i klikni na <strong>Restart Now</strong>.
+                            </p>
+                            <hr>
+                            <h4>10. Prvo pokretanje Linux Minta</h4>
+                            <p>
+                                Nakon restarta, Linux Mint će se podići sa hard diska. Prijavi se korisničkim podacima koje si napravio i to je to - <strong>LINUX MINT JE USPEŠNO INSTALIRAN</strong>.
+                                Sistem je spreman za upotrebu sa svim potrebnim aplikacijama, kodecima i drajverima već instaliranim.
+                            </p>
+                            <hr>
+                            <br />
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="verzije">
+                            <h4>Verzije Linux Minta</h4>
+                            <p>
+                                Linux Mint je poznat po svom stabilnom i predvidivom ciklusu izdavanja. Nova glavna verzija izlazi otprilike svakih 6 meseci, uvek bazirana na najnovijoj LTS verziji Ubuntu-a. 
+                                To znači da dobijaš sve prednosti Ubuntu stabilnosti, ali sa Mint elegancijom i dodatnim poboljšanjima.
+                                <br />
+                                Svaka verzija Linux Mint-a ima broj (npr. 21.3) i kodno ime (npr. Virginia). Kodna imena su uvek ženska imena, što je postala prepoznatljiva tradicija Mint-a. 
+                                Glavne verzije (npr. 21) dobijaju podršku od 5 godina, baš kao i Ubuntu LTS verzije na kojima su zasnovane. To znači sigurnosna ažuriranja, ispravke grešaka i stabilnost bez potrebe za čestim reinstalacijama.
+                                <br>Najpoznatije su:
+                            </p>
+                            <ul>
+                                <li><strong>Linux Mint 21 LTS - kodno ime "Vanessa"</strong> - bazirana na Ubuntu 22.04 LTS - podrška do 2027 godine.</li>
+                                <li><strong>Linux Mint 22 LTS - kodno ime "Wilma"</strong> - bazirana na Ubuntu 24.04 LTS - podrška do 2029 godine.</li>
+                                <li><strong>Linux Mint 22.3 LTS - kodno ime "Zena"</strong> - bazirana na Ubuntu 24.04 LTS - podrška do 2029 godine.</li>
+                            </ul>
+                            <p>
+                                Svaka glavna verzija ima i manje ažuriranje koje donose poboljšanja i nove funkcije, ali ne menjaju osnovi sistema.
+                            </p>
+                            <hr>
+                            <h4>Desktop okruženja</h4>
+                            <p>
+                                Za razliku od Ubuntu derivata koji nude različite verzije sistema, Linux Mint dolazi u tri desktop okruženja koje možeš izabrati tokom preuzimanja:
+                            </p>
+                            <ul>
+                                <li><strong>Cinnamon</strong> - ovo je glavno i najpreporučljivije okruženje. Moderan lep i intuitivan desktop koji je razvio sam Mint tim.
+                                Odličan balans između funkcionalnosti i lepog izgleda. Idealan za korisnike koji prelaze sa Windowsa.</li>
+                                <li><strong>MATE</strong> - klasičan i tradicionalan desktop koji podseća na starije Linux verzije. Lagan je, stabilan i jednostavan za korišćenje.
+                                Dobar izbor za one koji vole tradicionalan izgled ili imaju nešto stariji računar.</li>
+                                <li><strong>Xfce</strong> - Najlakše i najbrže okruženje. Minimalno koristi resurse, ali i dalje izgleda moderno i profesionalno.
+                                Savršeno za starije računare ili za one koji žele maksimalnu brzinu.</li>
+                            </ul>
+                            <hr>
+                            <h4>Kako izabrati desktop okruženje?</h4>
+                            <ul>
+                                <li>Ako nisi siguran i tek počinješ sa <strong>Mint-om</strong> - <strong>Cinnamon</strong> je najbolji izbor.</li>
+                                <li>Ako imaš stariji računar sa manje <strong>RAM-a</strong> - <strong>Xfce</strong> će raditi brže i glatko.</li>
+                                <li>Ako voliš klasičan Linux izgled i osećaj - <strong>MATE</strong> je odličan izbor.</li>
+                            </ul>
+                            <p>
+                                Sva tri okruženja dele istu osnovu Linux Mint-a, tako da možeš instalirati iste programe i koristiti iste funkcije. Razlika je samo u izgledu i potrošnji resursa.
+                            </p>
+                            <h4>Linux Mint Debian Edition (LMDE)</h4>
+                            <p>
+                                Postoji i specijalna verzija koja se zove LMDE - Linux Mint Debian Edition. Ova verzija nije zasnovana na Ubuntu-u već direktno na Debian-u. 
+                                Razlog? Mint tim želi da ima rezervnu opciju u slučaju da se Ubuntu promeni na način koji im se ne dopada. LMDE je takođe odličan i stabilan, 
+                                ali je LTS verzija zasnovana na Ubuntu-u i dalje glavna i najpreporučenija za većinu korisnika.
+                            </p>
+                            <h4>Koji Linux Mint izabrati?</h4>
+                            <ul>
+                                <li>Za većinu korisnika - <strong>Linux Mint 22.3 Cinnamon</strong> je najbolji izbor</li>
+                                <li>Za starije računare - <strong>Linux Mint 22.3 Xfce</strong></li>
+                                <li>Za ljubitelje klasičnog izgleda - <strong>Linux Mint 22.3 MATE</strong></li>
+                                <li>Za napredne korisnike koji vole <strong>Debian</strong> - <strong>LMDE</strong></li>
+                            </ul>
+                            <p>
+                                Bez obzira koju verziju izabrao, dobijaš isti kvalitet, stabilnost i podršku Mint zajednice.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="prednosti">
+                            <h4>Prednosti Linux Minta</h4>
+                            <p>
+                                Linux Mint je distribucija koja je stekla ogromnu popularnost zahvaljujući svom pristupu - sistem koji jednostavno radi, bez komplikacija. 
+                                Njegove prednosti dolaze do izražaja kako kod početnika, tako i kod iskusnijih korisnika koji cene stabilnost i eleganciju.
+                            </p>
+                            <hr>
+                            <h4>Izuzetno jednostavan za koriščenje</h4>
+                            <p>
+                                Linux Mint ima interfejs koji odmah deluje poznato. Cinnamon desktop podseća na klasičan Windows izgled - start meni dole levo, taskbar, sistemske ikone. 
+                                Nema zbunjujućih promena ili učenja novih koncepata. Sve osnovne stvari - instalacija programa, podešavanja, pregledanje fajlova - rade onako kako očekuješ.
+                            </p>
+                            <hr>
+                            <h4>Kompletan sistem odmah nakon instalacije</h4>
+                            <p>
+                                Ovo je možda najveća prednost Mint-a. Kada instaliraš sistem, sve je već tu - kodeci za muziku i video, osnovne aplikacije, drajveri, flash player. 
+                                Možeš odmah da slušaš MP3, gledaš filmove, surfuješ internetom. Ne moraš da tražiš dodatne programe ili da guglaš kako da pustiš video.
+                            </p>
+                            <hr>
+                            <h4>Besplatan i otvorenog koda</h4>
+                            <p>
+                                Linux Mint je potpuno besplatan. Možeš ga slobodno preuzeti, koristiti i instalirati na koliko god računara želiš. 
+                                Pošto je otvorenog koda, sistem se stalno unapređuje uz pomoć zajednice širom sveta. Nema skrivenih troškova, pretplata ili ograničenja.
+                            </p>
+                            <hr>
+                            <h4>Stabilan i pouzdan</h4>
+                            <p>
+                                Mint je zasnovan na Ubuntu LTS verzijama, što znači da dobijaš testiranu i stabilnu osnovu. Nove verzije izlaze samo kada su temeljno proverene. 
+                                Sistem retko pada, programi rade glatko, a ažuriranja ne donose neprijatna iznenađenja. Možeš se osloniti na Mint za ozbiljan rad.
+                            </p>
+                            <hr>
+                            <h4>Ne prati te i poštuje privatnost</h4>
+                            <p>
+                                Za razliku od nekih drugih operativnih sistema, Linux Mint ne prikuplja podatke o tebi, ne šalje telemetriju i ne prikazuje reklame. 
+                                Tvoj računar je zaista tvoj. Mint poštuje tvoju privatnost kao osnovni princip.
+                            <hr>
+                            <h4>Brz i efikasan</h4>
+                            <p>
+                                Mint dobro koristi resurse računara. Cinnamon verzija radi odlično na modernijim računarima, dok Xfce i MATE verzije mogu da ožive čak i starije mašine. 
+                                Sistem se brzo pokreće i ne usporava tokom korišćenja.
+                            </p>
+                            <hr>
+                            <h4>Odlična zajednica i dokumentacija</h4>
+                            <p>
+                                Linux Mint ima aktivnu zajednicu korisnika na forumima, dobru zvaničnu dokumentaciju i mnoštvo vodiča na internetu. 
+                                Ako naiđeš na problem, veoma je verovatno da je neko već imao isto pitanje i da postoji rešenje. Podrška na forumima je ljubazna i korisna.
+                            </p>
+                            <hr>
+                            <h4>Bezbedan sistem</h4>
+                            <p>
+                                Linux Mint je prirodno otporan na viruse i zlonamerni softver koji napada druge operativne sisteme. Redovna bezbednosna ažuriranja dodatno štite sistem. 
+                                Ne trebaš antivirusni program, a rizik od zaraze je minimalan.
+                            </p>
+                            <hr>
+                            <h4>Veliki izbor softvera</h4>
+                            <p>
+                                Zahvaljujući Ubuntu osnovi, imaš pristup ogromnom broju aplikacija kroz Software Manager. Za sve što ti treba - 
+                                kancelarijski rad, internet, multimediju, fotografiju, programiranje - postoje besplatne i kvalitetne alternative.
+                            </p>
+                            <hr>
+                            <h4>Odličan za svakodnevni rad i učenje</h4>
+                            <p>
+                                Mint je popularan i među običnim korisnicima i među programerima. Odličan je za pisanje dokumenata, gledanje filmova, surfovanje internetom, ali podržava i veliki broj programskih jezika i alata za razvoj. 
+                                Idealan je za učenje Linuxa bez frustracije.
+                            </p>
+                            <hr>
+                            <h4>Nema nepotrebnih eksperimenata</h4>
+                            <p>
+                                Za razliku od nekih distribucija koje stalno menjaju interfejs ili eksperimentišu sa novim idejama, Mint ostaje dosledan svom pristupu. 
+                                Kada naučiš gde su stvari, one tu i ostaju. Nema iznenađenja koja te teraju da ponovo učiš kako da koristiš računar.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="sistemski_zahtevi">
+                            <h4>Sistemski zahtevi</h4>
+                            <p>
+                                Pre instalacije Linux Mint-a važno je da znas kakav računar ti je potreban. Dobra vest je da Linux Mint može raditi i na slabijim mašinama, 
+                                a zahvaljujući različitim desktop okruženjima imaš opcije za svaki tip računara.
+                            </p>
+                            <h4>Minimalni sistemski zahtevi</h4>
+                            <p>
+                                Ovi zahtevi su dovoljni da Linux Mint radi, ali bez velikog komfora:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> dvojezgarni (64-bitni)</li>
+                                <li><strong>RAM memorija:</strong> 2 GB</li>
+                                <li><strong>Prostor na disku:</strong> najmanje 20 GB</li>
+                                <li><strong>Grafika:</strong> podrška za osnovnu rezoluciju (integrisana grafika je dovoljna)</li>
+                                <li><strong>Internet konekcija:</strong> preporučena za ažuriranja i instalaciju programa</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Linux Mint će raditi, ali može biti sporiji, naročito ako koristiš više programa odjednom ili Cinnamon desktop.
+                            </p>
+                            <hr>
+                            <h4>Preporučeni sistemski zahtevi (prijatno iskustvo)</h4>
+                            <p>
+                                Za glatko i ugodno korišćenje Linux Mint-a sa Cinnamon desktopom:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> četvorojezgarni ili bolji</li>
+                                <li><strong>RAM memorija:</strong> 4 GB i više</li>
+                                <li><strong>Prostor na disku:</strong> 30 GB i više</li>
+                                <li><strong>SSD disk:</strong> preporučen za brži rad sistema</li>
+                                <li><strong>Grafika:</strong> moderna integrisana ili diskretna grafička karta</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sa ovakvom konfiguracijom Linux mint radi brzo i stabilno u svakodnevnom radu, a Cinnamon desktop pokazuje sve svoje vizuelne mogućnosti.
+                            </p>
+                            <hr>
+                            <h4>Sistemski zahtevi za različita desktop okruženja</h4>
+                            <p>
+                                Linux Mint dolazi u tri verzije koje imaju različite zahteve:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Cinnamon</strong> (najlepši, moderan izgled)
+                                    <ul>
+                                        <li>
+                                            2 GB RAM-a (minimum), 4 GB preporučeno
+                                        </li>
+                                        <li>
+                                            Moderan procesor
+                                        </li>
+                                        <li>
+                                            Najbolje radi na novijim računarima
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <strong>MATE</strong> (klasičan izgled, srednja težina)
+                                    <ul>
+                                        <li>
+                                            2 GB RAM-a (dovoljno i za prijatan rad)
+                                        </li>
+                                        <li>
+                                            Slabiji procesor može
+                                        </li>
+                                        <li>
+                                            Dobar balans između izgleda i brzine
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <strong>Xfce</strong> (najlakši, najbrži)
+                                    <ul>
+                                        <li>
+                                            1-2 GB RAM-a (minimum)
+                                        </li>
+                                        <li>
+                                            Slabiji procesor
+                                        </li>
+                                        <li>
+                                            Minimalno opterećenje sistema
+                                        </li>
+                                        <li>
+                                            Idealan za starije računare
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ako imaš stariji računar, Xfce verzija je odličan izbor - sistem će raditi brzo i glatko
+                                čak i na mašinama starim 8 - 10 godina.
+                            </p>
+                            <hr>
+                            <h4>Vazna napomena za početnike</h4>
+                            <p>
+                                Ako nisi siguran da li će Linux Mint raditi na tvom računaru, možeš ga <strong>isprobati bez instalacije</strong> koristeći opciju <strong>"Start Linux Mint".</strong>
+                                Tako možeš proveriti da li sve funkcioniše, da li ti se dopada brzina i da li radi na tvom hardveru pre nego što doneseš konačnu odluku o instalaciji. 
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="okruženje">
+                            <h4>Radno okruženje</h4>
+                            <p>
+                                Radno okruženje (desktop eviroment) je ono sto vidiš i koristiš svaki dan - izgled sistema, meni, paneli, ikonice i način na koji pokrećeš programe. Linux Mint
+                                dolazi u tri različita radna okružtnja, a svaka ima svoj stil i način rada.
+                            </p>
+                            <h4>Cinnamon (podrazumebano i najpreporučenije okruženje)</h4>
+                            <p>
+                                <strong>Cinnamon</strong> je glavno radno okruženje koje je razvio sam Linux Mint tim. Ovo je ono što većina korisnika bira i preporučuje.
+                            </p>
+                            <ul>
+                                <li>Moderan i elegantan dizajn</li>
+                                <li>Podseća na klasičan Windows izgled - start meni dole levo, taskbar</li>
+                                <li>Vizuelno atraktivan sa lepim efektima i animacijama</li>
+                                <li>Intuitivan i lako se koristi</li>
+                                <li>Mnogo opcija za prilagođavanje bez komplikacija</li>
+                                <li>Dobar balans između lepog izgleda i funkcionalnosti</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Cinnamon je odličan ako želiš sistem koji izgleda profesionalno, radi glatko i ne zahteva navikavanje. Idealan za prelazak sa Windowsa.
+                            </p>
+                            <hr>
+                            <h4>MATE (klasično okruženje)</h4>
+                            <p>
+                                <strong>MATE</strong> je tradicionalno radno okruženje koje podseća na starije verzije GNOME-a i klasičan Linux izgled.
+                            </p>
+                            <ul>
+                                <li>Klasičan i tradicionalan dizajn</li>
+                                <li>Jednostavno i pregledno</li>
+                                <li>Troši manje resursa od Cinnamon-a</li>
+                                <li>Stabilno i pouzdano</li>
+                                <li>Dobar izbor za one koji vole "old school" stil</li>
+                                <li>Radi odlično i na nešto starijim računarima</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> MATE je odličan izbor ako voliš klasičan izgled ili imaš računar sa malo manje RAM-a, ali i dalje želiš prijatan interfejs.
+                            </p>
+                            <hr>
+                            <h4>Xfce (najlakše i najbrže okruženje)</h4>
+                            <p>
+                                <strong>Xfce</strong> je lagano i brzo radno okruženje fokusirano na efikasnost i brzinu.
+                            </p>
+                            <ul>
+                                <li>Minimalno korišćenje resursa</li>
+                                <li>Odlično za starije računare</li>
+                                <li>Stabilan i brz</li>
+                                <li>Jednostavan i funkcionalan</li>
+                                <li>Manje vizuelnih efekata</li>
+                                <li>I dalje izgleda moderno i profesionalno</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ako imaš stariji računar ili ti je važna maksimalna brzina sistema, Xfce je najbolji izbor. 
+                                Može da oživi računare stare i 10 godina.
+                            </p>
+                            <hr>
+                            <h4>Koje radno okruženje izabrati?</h4>
+                            <ul>
+                                <li>Ako nisi siguran ili tek počinješ sa Mint-om - <strong>Cinnamon</strong></li>
+                                <li>Ako imaš stariji računar ili želiš maksimalne performanse - <strong>Xfce</strong></li>
+                                <li>Ako voliš klasičan Linux izgled i osećaj - <strong>MATE</strong></li>
+                            </ul>
+                            <h4>Važno za početnike:</h4>
+                            <p>
+                                Sve tri verzije Minta dele istu osnovu i mogu instalirati iste programe. Razlika je samo u izgledu i brzini rada. 
+                                Možeš slobodno probati različite verzije sa USB sticka pre nego što se odlučiš - sistem pokrećeš sa USB-a i vidiš kako radi bez ikakve instalacije.
+                            </p>
+                             <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Za većinu korisnika Cinnamon je najbolji izbor - to je ono što je Linux Mint učinilo popularnim. 
+                                Elegantan je, lep, lako se koristi i pruža odlično korisničko iskustvo.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="softwer">
+                            <h4>Softwer i aplikacije</h4>
+                            <p>
+                               Linux Mint dolazi sa kompletnim setom unapred instaliranih aplikacija koje pokrivaju sve osnovne potrebe. 
+                               Ovo je jedna od najvećih prednosti Mint-a - sistem je spreman za rad odmah nakon instalacije, bez traženja i instaliranja dodatnih programa.
+                            </p>
+                            <h4>Unapred instalirane aplikacije</h4>
+                            <p>
+                                Nakon instalacije Linux Mint-a, dobijaš sve sto ti treba za osnovni rad:
+                            </p>
+                            <ul>
+                                <li><strong>Web pregledač</strong> - Firefox</li>
+                                <li><strong>Kancelarijski paket</strong> - LibreOffice (Writer, Calc, Impress)</li>
+                                <li><strong>Multimedia</strong> - media olejeri sa svim potrebnim kodecima</li>
+                                <li><strong>E-mail klijent</strong> - Thundeerbird</li>
+                                <li><strong>Upravljanje fotografijama</strong> - image viewer</li>
+                                <li><strong>Osnovni alati</strong> - kalkulator, tekst editor, menadzer fajlova</li>
+                                <li><strong>Kodeci</strong> - MP3, DVD, Flash i sve drugo za puštanje multimedijalnog sadržaja</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ovo je velika prednost Mint-a - ne moraš posle instalacije da tražiš kodeke ili drajvere. Sve radi odmah.
+                            </p>
+                            <hr>
+                            <h4>Software Manager</h4>
+                            <p>
+                                Linux Mint ima odličan Software Manager, grafičku prodavnicu aplikacija koja je veoma intuitivna.
+                            </p>
+                            <ul>
+                                <li>Instalacija programa jednim klikom</li>
+                                <li>Pregledne kategorije i pretraga</li>
+                                <li>Ocene i komentari korisnika</li>
+                                <li>Slike i opisi aplikacija</li>
+                                <li>Bez potrebe za terminalom</li>
+                                <li>Automatska ažuriranja instaliranih programa</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Software Manager je dizajniran tako da bude što jednostavniji. Čak i apsolutni početnici mogu lako pronaći i instalirati programe.
+                            </p>
+                            <hr>
+                            <h4>Flatpak Podrška</h4>
+                            <p>
+                                Linux Mint dolazi sa podrškom za Flatpak aplikacije:
+                            </p>
+                            <ul>
+                                <li>Pristup velikom broju modernih aplikacija</li>
+                                <li>Aplikacije izolovane od sistema (veća bezbednost)</li>
+                                <li>Jednostavna instalacija kroz Software Manager</li>
+                                <li>Redovna i brza ažuriranja</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sve ovo radi automatski u pozadini, tako da možeš koristiti Software Manager bez razmišljanja o tehničkim detaljima.
+                            </p>
+                            <hr>
+                            <h4>Zamena za popularne programe</h4>
+                            <p>
+                                Na Linux Mintu postoje alternative za skoro sve popularne programe:
+                            </p>
+                            <ul>
+                                <li>Microsoft Office - <strong>LibreOffice</strong></li>
+                                <li>Photoshop - <strong>GIMP</strong></li>
+                                <li>Adobe Illustrator - <strong>Inkscape</strong></li>
+                                <li>Window Media Player - <strong>VLC</strong></li>
+                                <li>Notepad - <strong>Gedit/Text Editor</strong></li>
+                                <li>Adobe PDF Reader - <strong>Document Viewer</strong></li>
+                                <li>Skype - <strong>verzija za Linux ili alternative</strong></li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> To znači da možeš raditi gotovo sve isto kao na Windowsu, samo sa besplatnim programima.
+                            </p>
+                            <hr>
+                            <h4>Dodatne aplikacije koje možeš lako instalirati</h4>
+                            <p>
+                                Kroz Software Manager imaš pristup hiljadama besplatnih programa:
+                            </p>
+                            <ul>
+                                <li><strong>Google Chrome</strong> - popularni web pregledač</li>
+                                <li><strong>Spotify</strong> - streaming muzike</li>
+                                <li><strong>Discord</strong> - komunikacija</li>
+                                <li><strong>Steam</strong> - gaming platforma</li>
+                                <li><strong>VS Code</strong> - editor koda</li>
+                                <li><strong>OBS Studio</strong> - snimanje ekrana</li>
+                                <li><strong>Audacity</strong> - audio editing</li>
+                                <li><strong>Blender</strong> - 3D modelovanje</li>
+                            </ul>
+                            <hr>
+                            <h4>Softver za programiranje i učenje</h4>
+                            <p>
+                                Linux Mint je veoma popularan među programerima i studentima:
+                            </p>
+                            <ul>
+                                <li>Podrška za Python, Java, C/C++, JavaScript i druge jezike</li>
+                                <li>Laka instalacija razvojnih alata</li>
+                                <li>Terminal koji programeri vole</li>
+                                <li>Veliki broj besplatnih razvojnih okruženja</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Zbog toga se često koristi u školama, na fakultetima i u IT industriji.
+                            </p>
+                            <hr>
+                            <h4>Bezbednost</h4>
+                            <p>
+                                Sve aplikacije i sistem se redovno ažuriraju kroz Update Manager. Ovo znači:
+                            </p>
+                            <ul>
+                                <li>Viši nivo bezbednosti</li>
+                                <li>Stabilnije verzije softvera (Mint testira ažuriranja pre nego što ih pusti)</li>
+                                <li>Kontrola nad ažuriranjima - biraš kada i šta da ažuriraš</li>
+                                <li>Jasna vizuelna indikacija važnosti svakog update-a</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Update Manager u Mint-u je odličan - jasno ti pokazuje šta se ažurira i koliko je to važno, tako da imaš potpunu kontrolu.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="bezbednost">
+                            <h4>Bezbednost i Ažuriranja</h4>
+                            <p>
+                                Jedna od velikih prednosti Linux Mint-a je to što je sistem bezbedan i redovno ažuriran. Mint ima odličan pristup ažuriranjima - daje ti kontrolu, ali i jasne preporuke šta treba uraditi.
+                            </p>
+                            <h4>Bezbednost sistema</h4>
+                            <p>
+                                Linux Mint je po svojoj prirodi bezbedan operativni sistem.
+                            </p>
+                            <ul>
+                                <li>Manje je izložen virusima i zlonamernom softveru</li>
+                                <li>Programi se instaliraju iz proverenih izvora (Sofware Manager)</li>
+                                <li>Korisnik nema administratorska prava bez dozvole</li>
+                                <li>Sistem traži lozinku za važne promene</li>
+                                <li>Nema skrivenog praćenja ili telemetrije</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sve ovo dodatno štiti sistem od slučajnih grešaka i napada, bez potrebe za antivirusnim programima.
+                            </p>
+                            <hr>
+                            <h4>Update Manager - ažuriranje na pametan način</h4>
+                            <p>
+                                Linux Mint ima odličan Update Manager koji je jednostavan i pouzdan.
+                            </p>
+                            <ul>
+                                <li>Jasno prikazuje koja ažuriranja su dostupna</li>
+                                <li>Svako ažuriranje ima nivo važnosti (1-5)</li>
+                                <li>Bezbednosna ažuriranja su jasno označena</li>
+                                <li>Možeš videti šta se tačno ažurira pre nego što klikneš "Install"</li>
+                                <li>Sistem ti objašnjava zašto je neko ažuriranje važno</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Za razliku od nekih sistema koji te samo obaveste "ima ažuriranja", Mint ti daje kontrolu i jasnu sliku šta se dešava.
+                            </p>
+                            <hr>
+                            <h4>Nivoi ažiriranja</h4>
+                            <p>
+                                Update Manager koristi sistem nivoa da ti pomogne da razumeš šta je važno:
+                            </p>
+                            <ul>
+                                <li><strong>Nivo 1 i 2</strong> - Bezbedonosna ažuriranja i važne zakrpe <strong>(uvek instaliraj)</strong></li>
+                                <li><strong>Nivo 3</strong> - Preporučena ažuriranja <strong>(uglavnom bezbedna)</strong></li>
+                                <li><strong>Nivo 4 i 5</strong> - Manje kritična ažuriranja</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ovo znači da čak i apsolutni početnici mogu da donesu informisanu odluku o ažuriranjima.
+                            </p>
+                            <hr>
+                            <h4>Redovna ažuriranja</h4>
+                            <p>
+                                Linux Mint redovno dobija ažuriranja koja poboljšavaju bezbednost i stabilnost sistema.
+                            </p>
+                            <ul>
+                                <li>Bezbednosne zakrpe se isporučuju brzo</li>
+                                <li>Ispravljaju se greške u sistemu i aplikacijama</li>
+                                <li>Ažuriranja su testirana pre nego što stignu do korisnika</li>
+                                <li>Update Manager ti daje jasnu sliku kada je potrebno restartovati računar</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Mint testira ažuriranja temeljnije od nekih drugih distribucija, što znači manje iznenađenja i problema.
+                            </p>
+                            <hr>
+                            <h4>LTS osnovna i dugoročna bezbednost</h4>
+                            <p>
+                                Linux Mint je zasnovan na Ubuntu LTS verzijama, što znači:
+                            </p>
+                            <ul>
+                                <li>Dugoročna podrška (5 godina)</li>
+                                <li>Redovna bezbednosna ažuriranja tokom celog perioda</li>
+                                <li>Stabilnost bez potrebe za čestim nadogradnjama</li>
+                                <li>Idealno za početnike i svakodnevnu upotrebu</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Možeš koristiti istu verziju Mint-a godinama bez brige o bezbednosti.
+                            </p>
+                            <hr>
+                            <h4>Timeshift - sigurna kopija sistema</h4>
+                            <p>
+                                Linux Mint dolazi sa Timeshift-om, alatom za pravljenje snimaka sistema.
+                            </p>
+                            <ul>
+                                <li>Pravi "fotografiju" sistema pre važnih promena</li>
+                                <li>Ako nešto pođe po zlu, možeš se vratiti na staro stanje</li>
+                                <li>Jednostavan za podešavanje</li>
+                                <li>Automatski pravi backup pre velikih ažuriranja</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ovo je kao "undo" dugme za ceo sistem - dodatni nivo sigurnosti koji ti daje mir.
+                            </p>
+                            <hr>
+                            <h4>Antivirus - da li je potreban?</h4>
+                            <p>
+                                Za većinu kućnih korisnika antivirus nije neophodan, ali:
+                            </p>
+                            <ul>
+                                <li>Uvek instaliraj programe iz pouzdanih izvora (Software Manager)</li>
+                                <li>Redovno ažuriraj sistem</li>
+                                <li>Ne preuzimaj sumnjive fajlove sa interneta</li>
+                                <li>Ne pokrećeš skripte koje ne razumeš</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Linux Mint već ima snažne bezbednosne mehanizme koji štite sistem. 
+                                Virusi za Linux su retki, a još ređe utiču na korisnike koji koriste sistem na normalan način.
+                            </p>
+                            <hr>
+                            <h4>Praktični savet za početnike</h4>
+                            <ul>
+                                <li>Kada vidiš obaveštenje o ažuriranjima - otvori Update Manager</li>
+                                <li>Instaliraj sve što je označeno kao bezbednosno (nivoi 1 i 2)</li>
+                                <li>Ostala ažuriranja instaliraj kada imaš vremena</li>
+                                <li>Ako nisi siguran - instaliraj sve što Update Manager preporučuje</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Linux Mint je dizajniran da bude bezbedan i pouzdan bez komplikovanja. Sistem te vodi kroz proces i objašnjava šta se dešava.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="zajednica">
+                            <h4>Zajednica i podrška</h4>
+                            <p>
+                                Jedna od najvećih snaga Linux Mint-a je njegova aktivna i prijateljska zajednica korisnika širom sveta. 
+                                Bez obzira da li si početnik ili napredniji korisnik, pomoć je skoro uvek lako dostupna i ljubazna.
+                            </p>
+                            <h4>Velika i aktivna zajednica</h4>
+                            <p>
+                                Linux Mint koristi milioni ljudi, što znači da:
+                            </p>
+                            <ul>
+                                <li>Gotovo svaki problem već ima rešenje</li>
+                                <li>Postoje forumi, vodiči i tutorijali za sve nivoe znanja</li>
+                                <li>Mnogo korisnika rado pomaže početnicima</li>
+                                <li>Zajednica je poznata po strpljivosti i ljubaznosti</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Mint zajednica je posebno prijateljski raspoložena prema početnicima - ovde nema glupavih pitanja.
+                            </p>
+                            <hr>
+                            <h4>Zvanična dokumentacija</h4>
+                            <p>
+                                Linux Mint ima veoma dobru zvaničnu dokumentaciju.
+                            </p>
+                            <ul>
+                                <li>Jasno objašnjeni osnovni i napredni koraci</li>
+                                <li>User Guide koji pokriva sve aspekte sistema</li>
+                                <li>Redovno ažurirana sa svakom novom verzijom</li>
+                                <li>Pogodna za samostalno učenje bez prethodnog znanja</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Dokumentacija je pisana jednostavnim jezikom, bez tehničkog žargona koji zbunjuje početnike.
+                            </p>
+                            <hr>
+                            <h4>Forumi i online pomoć</h4>
+                            <p>
+                                Ako naiđeš na problem, velika je šansa da je neko već imao isto pitanje.
+                            </p>
+                            <ul>
+                                <li><strong>Linux Mint Forums</strong> - zvanični forum sa aktivnom zajednicom</li>
+                                <li><strong>Reddit</strong> - r/linuxmint zajednica</li>
+                                <li><strong>Linux zajednice</strong> - mnogi opšti Linux forumi pokrivaju i Mint</li>
+                                <li><strong>YouTube</strong> - bezbroj video tutorijala na više jezika</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Na ovim mestima možeš postaviti pitanje i dobiti konkretan odgovor, često u roku od nekoliko sati.
+                            </p>
+                            <hr>
+                            <h4>Lokalna zajednica</h4>
+                            <p>
+                                Postoje i lokalne Linux Mint zajednice, uključujući forume, grupe i okupljanja.
+                            </p>
+                            <ul>
+                                <li>Pomoć na srpskom jeziku</li>
+                                <li>Razmena iskustava sa lokalnim korisnicima</li>
+                                <li>Podrška za početnike</li>
+                                <li>Facebook grupe i Discord serveri</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ovo je odličan način da brže naučiš i upoznaš ljude sa sličnim interesovanjima u tvom okruženju.
+                            </p>
+                            <hr>
+                            <h4>Resursi za učenje</h4>
+                            <p>
+                                Pored foruma, postoje i drugi načini da naučiš više o Mint-u:
+                            </p>
+                            <ul>
+                                <li><strong>Blog Linux Mint tima</strong> - objavljuje novosti i savete</li>
+                                <li><strong>Mint User Guide</strong> - kompletni vodič kroz sistem</li>
+                                <li><strong>Video tutorijali</strong> - od instalacije do naprednih tema</li>
+                                <li><strong>Linux Mint subreddit</strong> - dnevne diskusije i saveti</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sve je besplatno i dostupno svima.
+                            </p>
+                            <hr>
+                            <h4>Tutorijali i vodiči</h4>
+                            <p>
+                                Linux Mint ima bogat izbor vodiča za različite nivoe znanja:
+                            </p>
+                            <ul>
+                                <li>Vodiči za apsolutne početnike</li>
+                                <li>Kako instalirati određeni softver</li>
+                                <li>Rešavanje uobičajenih problema</li>
+                                <li>Napredne teme za one koji žele više</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Većina vodiča koristi slike i korak-po-korak objašnjenja, što olakšava praćenje.
+                            </p>
+                            <hr>
+                            <h4>Zašto je zajednica važna za početnike?</h4>
+                            <p>
+                                Kada tek ulaziš u svet Linuxa, važno je da znaš da:
+                            </p>
+                            <ul>
+                                <li>Nisi sam - hiljade ljudi prolazi kroz isti proces</li>
+                                <li>Pitanja su dobrodošla - niko neće reći "google it"</li>
+                                <li>Rešenja su dostupna - za skoro svaki problem postoji odgovor</li>
+                                <li>Zajednica je strpljiva - ljudi razumeju da si nov</li>
+                            </ul>
+                             <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Linux Mint zajednica je jedna od najprijateljskijih i najotvorenijih u Linux svetu. Fokus je na tome da pomogne, a ne da kritikuje.
+                            </p>
+                            <hr>
+                            <h4>praktični savet za početnike</h4>
+                            <p>
+                                Kada tražiš pomoć:
+                            </p>
+                            <ul>
+                                <li>Jasno opiši problem</li>
+                                <li>Navedi verziju Mint-a koju koristiš</li>
+                                <li>Ako ima greška, kopiraj poruku o grešci</li>
+                                <li>Budi strpljiv - odgovori obično stižu brzo</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Zajednica Mint-a voli da pomaže, posebno ako vidi da si pokušao da rešiš problem sam pre nego što si pitao. Ali i ako nisi - pitaj, neko će ti pomoći.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="pitanja">
+                            
+                            <div class="accordion" id="accordionExample">
+                                <h4>Pitanja i odgovori</h4>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <p>
+                                            <strong>1. Da li je Linux Mint besplatan?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>DA</strong>. Linux Mint je potpuno besplatan operativni sistem. Možeš ga preuzeti, koristiti i instalirati na koliko god računara želiš, 
+                                            bez ikakvih troškova. Nema skrivenih naknada, pretplata ili ograničenja.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <p>
+                                            <strong>2. Da li je Linux Mint dobar za početnike?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>DA</strong>. Linux Mint je jedan od najboljih izbora za početnike u svetu Linuxa. Interfejs je intuitivan i podseća na Windows, 
+                                            sve radi odmah nakon instalacije, i ima odličnu zajednicu koja pomaže novim korisnicima.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <p>
+                                            <strong>3. Da li mogu da koristim Linux Mint umesto Windowsa?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            U većini slučajeva - da. Linux Mint može da zameni Windows za svakodnevne zadatke kao što su internet, kancelarijski rad, gledanje filmova, slušanje muzike i programiranje. 
+                                            Postoje besplatne alternative za većinu popularnih Windows programa.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <p>
+                                            <strong>4. Da li mogu da koristim Linux Mint pored Windowsa?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Da</strong>. Linux Mint se može instalirati zajedno sa Windows-om (dual boot), tako da prilikom paljenja računara biraš koji sistem želiš da pokreneš.
+                                            Instalacioni program automatski prepoznaje Windows i nudi ovu opciju.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <p>
+                                            <strong>5. Da li su programi na Linux Mint-u besplatni?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Većina programa jeste besplatna i otvorenog koda. Software Manager nudi hiljade besplatnih aplikacija za sve potrebe. 
+                                            Postoje i komercijalne aplikacije, ali za većinu korisnika besplatni softver je više nego dovoljan.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <p>
+                                            <strong>6. Da li mi je potreban antivirus?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Za većinu kućnih korisnika antivirus nije neophodan. Linux Mint je bezbedan sistem koji ne prati tvoje aktivnosti, 
+                                            a redovna ažuriranja i instalacija programa iz pouzdanih izvora pružaju odličnu zaštitu.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        <p>
+                                            <strong>7. Da li Linux Mint radi na starijim računarima?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Da</strong>. Da. Linux Mint odlično radi i na starijem hardveru. Xfce verzija može da oživi računare stare i 10 godina. 
+                                            Čak i Cinnamon verzija radi dobro na računarima sa 4GB RAM-a.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        <p>
+                                            <strong>8. Da li moram da koristim terminal?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Ne</strong>. Gotovo sve možeš obaviti kroz grafički interfejs - instalacija programa, podešavanja, upravljanje fajlovima. 
+                                            Terminal je moćan alat, ali nije obavezan za svakodnevnu upotrebu.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        <p>
+                                            <strong>9. Šta ako nešto ne radi?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            U tom slučaju možeš potražiti pomoć na forumima, u dokumentaciji ili u lokalnoj zajednici. Velika je verovatnoća da je neko već imao isti problem i pronašao rešenje. 
+                                            Mint zajednica je poznata po tome što rado pomaže početnicima.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        <p>
+                                            <strong>10. Da li je Linux Mint težak za početnike?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Linux Mint nije težak za učenje. Ako znaš da koristiš Windows, znaš da koristiš i Mint. Interfejs je poznat, sve je jasno označeno, a dokumentacija je odlična. 
+                                            Većina korisnika se snalazi odmah nakon instalacije bez ikakvih problema.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#top" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                            
+                        </div>
+                    </div>
+                    
+                </main>
+            </div>
+        </div>
+        <!--Tabs/Pane-->
+        <!--Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Šabac
+                            <br />
+                            15000
+                            <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45321.530063269056!2d19.638790483094247!3d44.768660981005254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475bcae3dfdcb3cd%3A0x73a997a93228cdf2!2z0KjQsNCx0LDRhg!5e0!3m2!1ssr!2srs!4v1769966968881!5m2!1ssr!2srs" 
+                            width="400" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/dejanjankovic_/" target="_blank"><i class="fab fa-fw fa-square-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/dejan.jankovic.874580" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/@Jankovic_12345" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">O SAJTU</h4>
+                        <p class="lead mb-0">
+                            Nov si u Linuxu! Na pravom si mestu. Prvi koraci ne moraju biti teški. Ovde ćeš pronaći jasne vodiče, savete i primere koji će ti pomoći da sa sigurnošću započneš. <br /> <br />
+                            Ovaj sajt je namenjen novim Linux korisnicima, sa ciljem da im pomogne da lakše naprave svoje prve korake i upoznaju se sa open-source svetom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer-->
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Dejan Janković 2026. All right reserved</small></div>
+        </div>
+        <!-- End Copyright Section-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>  
+</body>
+</html>

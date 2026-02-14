@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Istorija Linuxa: Saznajte kako je Linus Torvalds stvorio Linux kernel, povezanost sa GNU projektom, razvoj distribucija i uticaj Linuxa u modernom svetu.">
+        <meta name="author" content="Dejan Janković" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <!-- Favicon-->
+            <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+            <!-- Font Awesome icons (free version)-->
+            <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+            <!-- Google fonts-->
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+            <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+            <!-- Core theme CSS (includes Bootstrap)-->
+            <link href="css/styles.css" rel="stylesheet" />
+        <title>Linux Distribucije</title>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase sticky-top" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html#page-top">Start Linux</a>
+                    <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#page-top">Home</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Commands</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#about">About</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#contact">Contact</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="linux_&_facts.html">Linux Facts</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="distribucije.html">Distributions</a></li>
+
+                            <li class="nav-item dropdown mx-0 mx-lg-1">
+                                <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded" href="#" id="navbarDistros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Distribution Guide
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDistros">
+                                    <li><a class="dropdown-item ubuntu" href="ubuntu.html">Ubuntu</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item linux_mint" href="linux_mint.html">Linux Mint</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item zorin_os" href="zorin_os.html">Zorin OS</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item elementary" href="elementary.html">elementary OS</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item pop" href="pop.html">PoP!_OS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+        <!-- End Navigation-->
+
+        <!-- Header-->
+        <header class="text-center fs-1 mt-5">
+            <h1 class="fs-1 fw-semibold text-uppercase">Najbolje distribucije za početnike</h1>
+            <figure class="text-center">
+                <blockquote class="blockquote">   
+                    <p class="fs-5 fst-italic">"Talk is cheap. Show me the code."</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Linus Torvalds
+                </figcaption>  
+            </figure>
+        </header>
+        <!-- End Header-->
+        <!--Linux Distribution Section-->
+        <section class="container my-5">
+            <div class="row g-5">
+                <!--Ubuntu-->
+                <div class="col-12 col-sm-6 col-md-4 col-lg mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/distros/ubuntu_logo.png" class="card-img-top img-fluid" alt="Ubuntu">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Ubuntu</h5>
+                            <p class="card-text">
+                                <strong>Ubuntu</strong> je najpoznatija Linux distribucija i idealan izbor za početnike.
+                                Razvijen je od strane kompanije <strong>Canonical</strong> i baziran je na <strong>Debianu.</strong>
+                                Ubuntu nudi jednostavan grafički interfejs, odličnu hardversku podršku i ogromnu zajednicu korisnika.
+                                Većina programa dostupna je kroz <strong>Software Center</strong>, a sistem se redovno ažurira i stabilan je za svakodnevnu upotrebu.
+                            </p>
+                            <hr>
+                            <div class="text-start">
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-box"></i> Paket menadžer:</strong> APT (<code>apt</code>)
+                                </p>
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-hdd"></i> Minimalno:</strong> Dual-core CPU, 4 GB RAM, 25 GB disk
+                                </p>
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-rocket-takeoff"></i>Preporučeno:</strong> 8 GB RAM, SSD
+                                </p>
+                            </div>
+                            <hr>
+                            <p class="card-text text-center"><strong>Više o samoj distribuciji pogledajte na linku ispod</strong></p>
+                            <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://ubuntu.com/" target="_blank">Ubuntu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Linux Mint-->
+                <div class="col-12 col-sm-6 col-md-4 col-lg mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/distros/linux_mint_logo.png" class="card-img-top img-fluid" alt="Mint">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Linux Mint</h5>
+                            <p class="card-text">
+                                <strong>Linux Mint</strong> je savršen za korisnike koji prelaze sa <strong>Windows</strong> operativnog sistema.
+                                Dolazi sa <strong>Cinnamon</strong> desktop okruženjem koje izgleda poznato i intuitivno. Ova distribucija je jako stabilna,
+                                brza i dolazi sa unapred instaliranim kodecima, što omogućava reprodukciju multimedije odmah nakon instalacije.
+                                Bazirana je na <strong>Ubuntu-u</strong> i nasledio je njegovu pouzdanost.
+                            </p>
+                            <hr>
+                            <div class="text-start">
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-box"></i> Paket menadžer:</strong> APT (<code>apt</code>)
+                                </p>
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-hdd"></i> Minimalno:</strong> Dual-core CPU, 2 GB RAM, 20 GB disk
+                                </p>
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-rocket-takeoff"></i>Preporučeno:</strong> 4-8 GB RAM, SSD
+                                </p>
+                            </div>
+                            <hr>
+                            <p class="card-text text-center"><strong>Više o samoj distribuciji pogledajte na linku ispod</strong></p>
+                            <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://linuxmint.com/" target="_blank">Linux Mint</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Zorin OS-->
+                <div class="col-12 col-sm-6 col-md-4 col-lg mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/distros/zorinos_logo.png" class="card-img-top img-fluid" alt="Mint">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Zorin OS</h5>
+                            <p class="card-text">
+                                <strong>Zorin OS</strong> je odličan izbor za korisnike koji prelaze sa <strong>Windows</strong> operativnog sistema.
+                                Dolazi sa prilagodljivim desktop okruženjem koje je jednostavno za korišćenje. Distribucija je stabilna,
+                                brza i dolazi sa unapred instaliranim osnovnim alatima i kodecima, što omogućava rad odmah nakon instalacije.
+                                Bazirana je na <strong>Ubuntu-u</strong> i poznata je po dobroj hardverskoj podršci.
+                            </p>
+                            <hr>
+                            <div class="text-start">
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-box"></i> Paket menadžer:</strong> APT (<code>apt</code>)
+                                </p>
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-hdd"></i> Minimalno:</strong> Dual-core CPU, 2 GB RAM, 15-20 GB disk
+                                </p>
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-rocket-takeoff"></i>Preporučeno:</strong> 4-8 GB RAM, SSD
+                                </p>
+                            </div>
+                            <hr>
+                            <p class="card-text text-center"><strong>Više o samoj distribuciji pogledajte na linku ispod</strong></p>
+                            <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://zorin.com/os/" target="_blank">Zorin OS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Elementary OS-->
+                <div class="col-12 col-sm-6 col-md-4 col-lg mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/distros/elementary_os.png" class="card-img-top img-fluid" alt="Mint">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">elementary OS</h5>
+                            <p class="card-text">
+                                <strong>elementary OS</strong> je Linux distribucija namenjena korisnicima koji vole moderan dizajn.
+                                Interfejs je inspirisan <strong>macOS</strong> okruženjem, što doprinosi prijatnom korisničkom iskustvu.
+                                Sistem je stabilan i fokusiran na osnovne funkcionalnosti, bez nepotrebnih opcija koje bi mogle zbuniti nove korisnike.
+                                Takođe je baziran na <strong>Ubuntu-u</strong>, što mu obezbeđuje pouzdanost i sigurnost.
+                            </p>
+                            <hr>
+                            <div class="text-start">
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-box"></i> Paket menadžer:</strong> APT (<code>apt</code>)
+                                </p>
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-hdd"></i> Minimalno:</strong> Dual-core CPU, 4 GB RAM, 15 GB disk
+                                </p>
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-rocket-takeoff"></i>Preporučeno:</strong> 8 GB RAM, SSD
+                                </p>
+                            </div>
+                            <hr>
+                            <p class="card-text text-center"><strong>Više o samoj distribuciji pogledajte na linku ispod</strong></p>
+                            <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://elementary.io/" target="_blank">Elementary OS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--PoP!_OS-->
+                <div class="col-12 col-sm-6 col-md-4 col-lg mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/distros/Pop!_OS.png" class="card-img-top img-fluid" alt="Mint">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">PoP!_OS</h5>
+                            <p class="card-text">
+                                <strong>Pop!_OS</strong> je moderan i moćan Linux operativni sistem razvijen od strane kompanije <strong>System76</strong>.
+                                Iako je prilagođen početnicima, nudi i napredne mogućnosti za produktivnost i rad. Posebno se ističe dobra podrška za
+                                <strong>NVIDIA</strong> grafičke kartice i optimizacija za savremeni hardver. Baziran je na <strong>Ubuntu-u</strong> i
+                                predstavlja odličan izbor za korisnike koji žele stabilan sistem.
+                            </p>
+                            <hr>
+                            <div class="text-start">
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-box"></i> Paket menadžer:</strong> APT (<code>apt</code>)
+                                </p>
+                                <p class="mb-1">
+                                    <strong><i class="bi bi-hdd"></i> Minimalno:</strong> Dual-core CPU, 4 GB RAM, 20 GB disk
+                                </p>
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-rocket-takeoff"></i>Preporučeno:</strong> 8-16 GB RAM, SSD
+                                </p>
+                            </div>
+                            <hr>
+                            <p class="card-text text-center"><strong>Više o samoj distribuciji pogledajte na linku ispod</strong></p>
+                            <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://system76.com/pop/" target="_blank">PoP!_OS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Linux Distribution Section-->
+        <!--Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Šabac
+                            <br />
+                            15000
+                            <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45321.530063269056!2d19.638790483094247!3d44.768660981005254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475bcae3dfdcb3cd%3A0x73a997a93228cdf2!2z0KjQsNCx0LDRhg!5e0!3m2!1ssr!2srs!4v1769966968881!5m2!1ssr!2srs" 
+                            width="400" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/dejanjankovic_/" target="_blank"><i class="fab fa-fw fa-square-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/dejan.jankovic.874580" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/@Jankovic_12345" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">O SAJTU</h4>
+                        <p class="lead mb-0">
+                            Nov si u Linuxu! Na pravom si mestu. Prvi koraci ne moraju biti teški. Ovde ćeš pronaći jasne vodiče, savete i primere koji će ti pomoći da sa sigurnošću započneš. <br /> <br />
+                            Ovaj sajt je namenjen novim Linux korisnicima, sa ciljem da im pomogne da lakše naprave svoje prve korake i upoznaju se sa open-source svetom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer-->
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Dejan Janković 2026. All right reserved</small></div>
+        </div>
+        <!-- End Copyright Section-->
+
+        
+        
+
+        
+
+        
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

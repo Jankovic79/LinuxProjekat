@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Istorija Linuxa: Saznajte kako je Linus Torvalds stvorio Linux kernel, povezanost sa GNU projektom, razvoj distribucija i uticaj Linuxa u modernom svetu.">
+    <meta name="author" content="Dejan Janković" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <title>elementary OS</title>
+</head>
+<body class="elementary" id="top">
+    <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase sticky-top" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html#page-top">Start Linux</a>
+                    <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#page-top">Home</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Commands</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#about">About</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#contact">Contact</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="linux_&_facts.html">Linux Facts</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="distribucije.html">Distributions</a></li>
+                        <li class="nav-item dropdown mx-0 mx-lg-1">
+                            <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded" href="#" id="navbarDistros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Distribution Guide
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDistros">
+                                <li><a class="dropdown-item ubuntu" href="ubuntu.html">Ubuntu</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item linux_mint" href="linux_mint.html">Linux Mint</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item zorin_os" href="zorin_os.html">Zorin OS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item elementary" href="elementary.html">elementary OS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item pop" href="pop.html">PoP!_OS</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+        <!-- End Navigation-->
+        <!-- Header-->
+        <header class="text-center fs-1 mt-5">
+            <h1 class="fs-1 fw-semibold">elementary OS</h1>
+            <figure class="text-center">
+                <blockquote class="blockquote">   
+                    <p class="fs-5 fst-italic text-uppercase fw-bold" style="color: #3689E6;">"Jednostavnost koja inspiriše"</p>
+                </blockquote>  
+            </figure>
+        </header>
+        <!-- End Header-->
+        <!--Tabs/Pane-->
+        <div class="container mt-5">
+            <div class="row">
+                <aside class="col-4">
+                    <div class="nav nav-pills flex-column fs-5" id="elementary-tabs" role="tablist">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#uvod">
+                            <i class="bi bi-info-circle me-3"></i>
+                            Uvod
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#instalacija">
+                            <i class="bi bi-gear-fill me-3"></i>
+                            Instalacija
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#verzije">
+                            <i class="bi bi-folder me-3"></i>
+                            Verzije
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#prednosti">
+                            <i class="bi bi-check-circle me-3"></i>
+                            Prednosti
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sistemski_zahtevi">
+                            <i class="bi bi-laptop me-3"></i>
+                            Sistemski zahtevi
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#okruženje">
+                            <i class="bi bi-display me-3"></i>
+                            Radno okruženje
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#softwer">
+                            <i class="bi bi-box-seam me-3"></i>
+                            Softwer i aplikacije
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#bezbednost">
+                            <i class="bi bi-shield-check me-3"></i>
+                            Bezbednost i Ažuriranja
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#zajednica">
+                            <i class="bi bi-chat-dots me-3"></i>
+                            Zajednica i podrška
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pitanja">
+                            <i class="bi bi-question-circle me-3"></i>
+                            Česta pitanja
+                        </button>
+                    </div>
+                </aside>
+                <main class="col-8">
+                    <div class="tab-content">
+
+                        <div class="tab-pane fade show active mb-5" id="uvod">
+                            <h4>
+                                O SAMOJ DISTRIBUCIJI
+                            </h4>
+                            <p>
+                                Ako tek ulaziš u svet Linuxa, <strong>elementary OS</strong> je jedna od onih distribucija koju odmah primetiš zbog svoje jednostavnosti i lepog dizajna. Ona je osmišljena tako da korisniku pruži sve što mu je potrebno za svakodnevni rad, 
+                                a da pritom ne bude pretrpana nepotrebnim opcijama ili komplikovanim podešavanjima. Ukratko, Elementary OS je Linux za ljude koji žele da računar radi odmah i da rad bude prijatan.
+                                <br /><br />
+                                Jedna od najvećih prednosti ove distribucije je njen interfejs. On je čist, pregledan i vizuelno dopadljiv - sa elegantnim ikonama, prozorima koji se glatko otvaraju i zatvaraju, i animacijama koje olakšavaju navigaciju. 
+                                Ako dolaziš sa Windows-a ili MacOS-a, Elementary OS će ti delovati poznato i intuitivno, što znači da će ti prelazak na Linux biti mnogo lakši.
+                                <br /><br />
+                                Elementary OS dolazi sa osnovnim aplikacijama koje su već instalirane - za internet pretragu, čitanje e-pošte, slušanje muzike, pregled fotografija, i još mnogo toga. 
+                                Ne moraš odmah da tražiš ili instaliraš dodatni softver da bi počeo sa radom. Takođe, sistem je stabilan i siguran - nadogradnje dolaze redovno, a privatnost korisnika je u fokusu, što znači da tvoji podaci ostaju zaštićeni.
+                                <br /><br />
+                                Ova distribucija nije samo za početnike. Mnogi iskusni korisnici je biraju kada žele brz, lagan i elegantan operativni sistem koji jednostavno radi ono što treba, bez komplikacija. 
+                                Elementary OS kombinuje praktičnost, estetiku i pouzdanost, i zato je odličan izbor za sve koji žele da isprobaju Linux, ali bez osećaja da su prepušteni složenim podešavanjima i komandama.
+                                <br /><br />
+                                Ukratko, Elementary OS je Linux koji je lep, jednostavan i prijatan za korišćenje - savršen za svakoga ko želi da računar funkcioniše intuitivno i bez stresa. 
+                                Ako tražiš sistem koji „radi odmah i lepo izgleda“, ovo je distribucija koju treba da probaš.
+                            </p>
+                            
+                        </div>
+
+                        <div class="tab-pane fade" id="instalacija">
+                            <h4>KAKO INSTALIRATI elementary OS - vodič za početnike</h4>
+                            <p>
+                                Ako želiš da isprobaš <strong>elementary OS</strong> ili da pređeš sa Windowsa na sistem koji je elegantan, moderan i potpuno besplatan, u nastavku ću objasniti ceo proces instalacije korak po korak, bez komplikovanja i tehničkih izraza koje niko ne razume.
+                            </p>
+                            <br />
+                            <h4>1. Odlazak na zvanični elementary OS sajt</h4>
+                            <p>
+                                Prvi korak je da odeš na zvanični elementary sajt. U internet pregledač (Chrome, Firefox, Edge...) ukucaj <strong>https://elementary.io</strong>. Kada se stranica učita, klikni
+                                na <strong>Download</strong>. Videćeš opciju da uneseš donaciju, ali nije neophodno. Možeš ostaviti i 0$ - sistem je potpuno besplatan. Preporučena verzija za većinu korisnika je standardno izdanje
+                                elementary OS-a, sa modernim dizajnom i svim osnovnim funkcijama.
+                            </p>
+                            <hr>
+                            <h4>2. Preuzimanje elementary OS ISO fajla</h4>
+                            <p>
+                                Klikni na Download i sačuvaj ISO fajl na svom računaru. 
+                                <strong>ISO fajl je zapravo „slika“ instalacionog diska elementary OS-a</strong>. Veličina fajla je oko 2-3 GB, pa preuzimanje može potrajati nekoliko minuta, zavisno od brzine interneta.
+                            </p>
+                            <hr>
+                            <h4>3. Preuzimanje programa Balena Etcher</h4>
+                            <p>
+                                Da bi mogao da instaliraš Linux Mint, potreban ti USB fleš (minimum 8GB) i program koji će ISO fajl prebaciti na USB tako da on postane instalacioni. Jedan od najjednostavnijih programa za to je <strong>Balena Etcher</strong>.
+                                Otvori sajt <strong>https://balena.io/etcher/</strong>. Klikni na <strong>Download Etcher</strong> i preuzmi verziju za svoj operativni sistem (Windows, macOS ili Linux). Nakon preuzimanja, instaliraj program kao i bilo koji drugi.
+                            </p>
+                            <hr>
+                            <h4>4. Pravljenje bootabilnog USB-a</h4>
+                            <p>
+                                Uključi USB fleš u računar i pokreni Balena Etcher. Postupak je veoma jednostavan:
+                            </p>
+                            <ul>
+                                <li>Klikni na <strong>Flash from file</strong> i izaberi elementary OS ISO fajl koji si preuzeo</li>
+                                <li>Klikni na <strong>Select target</strong> i izaberi svoj USB fleš</li>
+                                <li>Klikni na <strong>Flash</strong></li>
+                            </ul>
+                            <p>
+                                Sačekaj da se proces završi. Može potrajati nekoliko minuta. Kada je gotovo, USB je spreman za instalaciju Zorin OS-a.
+                            </p>
+                            <hr>
+                            <h4>5. Pokretanje računara sa USB-a</h4>
+                            <p>
+                                Restartuješ računar i podesi ga da se pokrene sa USB-a. Tokom paljenja računara, pritiskaj taster kao što su <strong>F12, F10, ESC ili DEL</strong> (zavisi od proizvođača).
+                                Otvoriće se meni za izbor uređaja za pokretanje. Izaberi USB fleš i potvrdi.
+                            </p>
+                            <hr>
+                            <h4>6. Pokretanje instalacije elementary OS-a</h4>
+                            <p>
+                                Nakon toga će se pojaviti ekran elementary OS-a. Imaćeš dve opcije:
+                            </p>
+                            <ul>
+                                <li><strong>Try elementary OS</strong> - da probaš sistem bez instalacije (sve radi sa USB-a, ništa se ne menja na računaru)</li>
+                                <li><strong>Install elementary OS</strong> - da odmah instaliraš sistem</li>
+                            </ul>
+                            <p>
+                               Ako želiš da probaš pre instalacije, izaberi <strong>Try</strong>. Kada budeš spreman, klikni na Install elementary OS i prati nekoliko jednostavnih koraka:
+                            </p>
+                            <ul>
+                                <li>Izaberi jezik</li>
+                                <li>Izaberi raspored tastature</li>
+                                <li>Možeš čekirati opciju za instalaciju multimedijskih kodeka i dodatnog softvera (preporučuje se)</li>
+                            </ul>
+                            <hr>
+                            <h4>7. Izbor diska i instalacija sistema</h4>
+                            <p>
+                                Sledeći korak je da izabereš gde će se elementary OS instalirati.
+                            </p>
+                            <ul>
+                                <li>Ako želiš da koristiš samo elementary OS, izaberi <strong>Erase disk and install elementary OS</strong></li>
+                                <li>Ako imaš Windows i želiš <strong>dual boot</strong>, elementary OS će automatski prepoznati Windows i ponuditi opciju da instaliraš sistem pored njega</li>
+                            </ul>
+                            <p>
+                                Potvrdi izbor i nastavi dalje.
+                            </p>
+                            <hr>
+                            <h4>8. Podešavanje korisnika</h4>
+                            <p>
+                                Unesi sledeće podatke:
+                            </p>
+                            <ul>
+                                <li><strong>Svoje ime</strong></li>
+                                <li><strong>Ime računara</strong></li>
+                                <li><strong>Korisničko ime</strong></li>
+                                <li><strong>Lozinku</strong></li>
+                                <li>Izaberi da li žeiš <strong>automatsko prijavljivanje</strong> ili <strong>unos lozinke</strong> prilikom svakog paljenja računara</li>
+                            </ul>
+                            <hr>
+                            <h4>9. Završetak instalacije</h4>
+                            <p>
+                               Kada sve to završiš, instalacija će početi. Ceo proces traje oko 10-20 minuta, zavisno od računara. 
+                               Kada se instalacija završi, bićeš obavešten da možeš da restartuješ računar. Izvadi USB fleš i klikni na <strong>Restart Now</strong>.
+                            </p>
+                            <hr>
+                            <h4>10. Prvo pokretanje elementary OS-a</h4>
+                            <p>
+                                Nakon restarta, Elementary OS će se podići sa hard diska. Prijavi se korisničkim podacima koje si napravio i dočekaće te <strong>Welcome screen</strong> koji te vodi kroz osnovna podešavanja. 
+                                Možeš izabrati:
+                            </p>
+                            <ul>
+                                <li>Izgled desktopa (plave, svetle, tamne teme)</li>
+                                <li>Dodatne opcije i prilagođavanje sistema</li>
+                            </ul>
+                            <p>
+                                I to je to - <strong>elementary OS je uspešno instaliran</strong>. Sada imaš moderan, jednostavan i lep sistem spreman za svakodnevnu upotrebu.
+                            </p>
+                            <hr>
+                            <br />
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="verzije">
+                            <h4>Verzije elementary OS-a</h4>
+                            <p>
+                                Elementary OS nema veliki broj različitih izdanja kao neke druge Linux distribucije. 
+                                Umesto toga, fokus je na jednoj glavnoj verziji koja se redovno unapređuje i održava. To znači manje zbunjivanja za korisnike i jednostavniji izbor.
+                            </p>
+                            <h4>Trenutna stabilna verzija</h4>
+                            <p>
+                                Elementary OS uvek ima jednu glavnu stabilnu verziju koja je namenjena svakodnevnoj upotrebi. To je verzija koju treba da preuzme većina korisnika - posebno početnici.
+                                Svaka verzija dolazi sa:
+                            </p>
+                            <ul>
+                                <li>unapređenim Pantheon desktop okruženjem</li>
+                                <li>poboljšanim performansama</li>
+                                <li>novim aplikacijama i ispravkama grešaka</li>
+                                <li>bezbednosnim ažuriranjima</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Nazivi verzija su jednostavni (npr. 6, 7...), i svaka nova verzija donosi moderniji izgled i bolju optimizaciju.
+                            </p>
+                            <hr>
+                            <h4>Stable vs. Early Access</h4>
+                            <p>
+                               Na zvaničnom sajtu možeš primetiti dve opcije:
+                            </p>
+                            <ul>
+                                <li><strong>Stable (stabilna verzija)</strong>
+                                <ul>
+                                    <li>Ovo je verzija koju treba da instaliraš. Testirana je i spremna za svakodnevni rad.</li>
+                                </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><strong>Early Access (rana verzija)</strong>
+                                <ul>
+                                    <li>
+                                        Ovo je verzija za one koji žele da isprobaju nove funkcije pre zvaničnog izlaska. Može sadržati sitne greške i nije preporučena za početnike.
+                                    </li>
+                                </ul>
+                                </li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ako nisi siguran šta da izabereš - uvek preuzmi <strong>stabilnu verziju</strong>.
+                            </p>
+                            <hr>
+                            <h4>Da li postoji Lite verzija?</h4>
+                            <p>
+                                <strong>Ne</strong>. Elementary OS nema posebnu „Lite“ verziju za stare računare kao neke druge distribucije.
+                                Međutim, sistem je relativno lagan i dobro optimizovan, pa će raditi solidno i na starijim mašinama sa 4GB RAM-a.
+                                Ako imaš baš star računar (2GB RAM ili manje), možda će biti potrebna neka druga laganija distribucija.
+                            </p>
+                            <hr>
+                            <h4>Koliko dugo traje podrška?</h4>
+                            <p>
+                               Svaka glavna verzija Elementary OS-a dobija bezbednosna ažuriranja i podršku nekoliko godina. 
+                               To znači da ne moraš stalno da reinstaliraš sistem — dobijaš nadogradnje direktno kroz sistem.
+                            </p>
+                            <hr>
+                            <h4>Koju verziju da izabereš?</h4>
+                            <p>
+                                Ako si početnik:
+                                <strong>Preuzmi najnoviju stabilnu verziju sa zvaničnog sajta</strong>. To je najbezbednija i najjednostavnija opcija.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="prednosti">
+                            <h4>Prednosti elementary OS-a</h4>
+                            <p>
+                                Elementary OS je distribucija koja je napravljena sa jasnom idejom - da Linux bude jednostavan, lep i prijatan za svakodnevnu upotrebu. 
+                                Upravo zbog toga ima nekoliko velikih prednosti koje je izdvajaju od drugih sistema.
+                            </p>
+                            <hr>
+                            <h4>Moderan i elegantan izgled</h4>
+                            <p>
+                                Elementary OS je poznat po svom čistom i minimalističkom dizajnu. Sve izgleda uredno, pregledno i profesionalno.
+                                Desktop okruženje Pantheon podseća na macOS, ali je jednostavno za korišćenje i veoma intuitivno. Nema previše dugmića, nema haosa - samo ono što ti zaista treba.
+                            </p>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Za korisnike koji prelaze sa Windows-a ili Mac-a, ovo znači lakšu prilagodljivost i manje zbunjivanja.
+                            </p>
+                            <hr>
+                            <h4>Jednostavan za početnike</h4>
+                            <p>
+                                Jedna od najvećih prednosti je to što je sistem napravljen tako da „radi odmah“.
+                            </p>
+                            <ul>
+                                <li>Instalacija je jednostavna</li>
+                                <li>Ažuriranja se instaliraju kroz grafički interfejs</li>
+                                <li>Većina stvari funkcioniše bez dodatnih podešavanja</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ne moraš da koristiš terminal ako to ne želiš.
+                            </p>
+                            <hr>
+                            <h4>Fokus na privatnost i sigurnost</h4>
+                            <p>
+                                Elementary OS ne prati korisnike i ne prikuplja nepotrebne podatke.
+                                Sistem redovno dobija bezbednosna ažuriranja, što znači da su tvoji podaci zaštićeni. 
+                                Za mnoge ljude ovo je važan razlog za prelazak sa komercijalnih sistema.
+                            </p>
+                            <hr>
+                            <h4>Stabilnost i pouzdanost</h4>
+                            <p>
+                                Zahvaljujući Ubuntu bazi, Elementary OS je stabilan i pouzdan za svakodnevni rad - bilo da koristiš računar za školu, posao ili kućnu upotrebu.
+                                Nećeš se suočavati sa čestim padovima sistema ili neočekivanim problemima.
+                            </p>
+                            <hr>
+                            <h4>Jednostavan AppCenter</h4>
+                            <p>
+                                Elementary OS ima svoj AppCenter - mesto gde možeš bezbedno instalirati aplikacije.
+                                Aplikacije su prilagođene sistemu i vizuelno se uklapaju, pa ceo sistem izgleda ujednačeno i profesionalno.
+                            </p>
+                            <hr>
+                            <h4>Dobra optimizacija</h4>
+                            <p>
+                               Sistem je relativno lagan i radi glatko čak i na računarima sa 4GB RAM-a.
+                               Naravno, noviji računar će raditi još bolje, ali Elementary OS nije zahtevan kao neki moderni sistemi.
+                            </p>
+                            <hr>
+                            <h4>Zaključak</h4>
+                            <p>
+                                Ako tražiš operativni sistem koji je:
+                            </p>
+                            <ul>
+                                <li>lep</li>
+                                <li>jednostavan</li>
+                                <li>stabilan</li>
+                                <li>bez reklama i nepotrebnog softvera</li>
+                            </ul>
+                            <p>
+                                Elementary OS je veoma dobar izbor, posebno ako tek ulaziš u svet Linuxa.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="sistemski_zahtevi">
+                            <h4>Sistemski zahtevi Zorin OS-a</h4>
+                            <p>
+                                Jedna od dobrih stvari kod Zorin OS-a je to što ne zahteva jak računar da bi radio lepo i stabilno. Naravno, kao i svaki sistem, bolje performanse dobijaš na jačem hardveru, 
+                                ali čak i starije mašine mogu sasvim pristojno da ga pokreću.
+                            </p>
+                            <h4>Minimalni zahtevi (Zorin OS Core)</h4>
+                            <p>
+                                Ovo su osnovni zahtevi da bi sistem radio:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> 1 GHz dual-core</li>
+                                <li><strong>RAM memorija:</strong> 2 GB RAM-a (4 GB preporučeno za bolji rad)</li>
+                                <li><strong>Prostor na disku:</strong> 15 GB</li>
+                                <li><strong>Grafika:</strong> grafička kartica koja podržava 1024x768 rezoluciju</li>
+                                <li><strong>Internet konekcija:</strong> preporučena za ažuriranja i instalaciju programa</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sa ovim specifikacijama sistem će raditi, ali za ugodnije islustvo 4 GB RAM-a je realno bolja opcija.
+                            </p>
+                            <hr>
+                            <h4>Preporučeni zahtevi Zorin OS 18 Core (za udoban rad)</h4>
+                            <p>
+                                Ako želiš da sistem radi glatko bez razmisljanja o resursima:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> 2 GHz četvorojezgarni 64-bit</li>
+                                <li><strong>RAM memorija:</strong> 4 - 8 GB</li>
+                                <li><strong>Prostor na disku:</strong> 20 GB i više</li>
+                                <li><strong>SSD disk:</strong> nije obavezan, ali preporučen za brži rad sistema</li>
+                                <li><strong>Grafika:</strong> sa podrškom za 1280x1024 ili veću rezoluciju</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong>  Sa SSD-om i 8 GB RAM-a Zorin radi veoma glatko i bez ikakvog usporavanja u svakodnevnom radu.
+                            </p>
+                            <hr>
+                            <h4>Minimalni zahtevi Zorin OS 18 Lite</h4>
+                            <p>
+                                Lite verzija je znatno skromnija po pitanju resursa:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> 1GHz 64-bit</li>
+                                <li><strong>RAM memorija:</strong>1 GB (2 GB preporučeno)</li>
+                                <li><strong>Prostor na disku:</strong>10 - 15 GB</li>
+                                <li><strong>SSD disk:</strong>nije obavezan, ali preporučen za brži rad sistema</li>
+                                <li><strong>Grafika:</strong>sa podrškom za 1024x768 rezoluciju</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ne zahteva naprednu grafiku niti 3D akceleraciju, jer koristi lagani Xfce desktop.
+                            </p>
+                            <hr>
+                            <h4>Preporučeni zahtevi Zorin OS 18 Lite</h4>
+                            <p>
+                                Za glatko i prijatno iskustvo:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> 2 GHz dual-core</li>
+                                <li><strong>RAM memorija:</strong> 2-4 GB RAM-a</li>
+                                <li><strong>Prostor na disku:</strong></li>
+                                <li><strong>SSD disk:</strong>nije obavezan, ali preporučen za brži rad sistema</li>
+                                <li><strong>Grafika:</strong> sa podrškom za 1280x1024 rezoluciju</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Lite verzija može bez problema da oživi laptop star 8-12 godina, posebno ako ima SSD.
+                            </p>
+                            <hr>
+                            <h4>Dodatna napomena</h4>
+                            <p>
+                                Zorin OS je dostupan samo u 64-bit verziji. Ako imaš veoma star 32-bit računar (stariji od ~2007. godine), ova verzija neće raditi.
+                                Ako nisi siguran da li će raditi na tvom računaru, možeš ga pokrenuti kao „Live“ sistem sa USB-a i testirati bez instalacije.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="okruženje">
+                            <h4>Radno okruženje</h4>
+                            <p>
+                                Jedna od stvari po kojoj se Zorin OS razlikuje od mnogih drugih Linux distribucija jeste njegov izgled i način na koji je radno okruženje osmišljeno.
+                                Zorin ne pokušava da bude „drugačiji po svaku cenu“. Cilj mu je da bude poznat, intuitivan i prijatan za korišćenje, posebno ljudima koji dolaze sa Windows-a ili macOS-a.
+                            </p>
+                            <h4>Zorin Desktop (baziran na GNOME-u)</h4>
+                            <p>
+                                <strong>U Core i Pro verziji</strong> koristi se prilagođeno GNOME radno okruženje, koje je temeljno izmenjeno da izgleda klasičnije i poznatije.
+                                Dobijaš:
+                            </p>
+                            <ul>
+                                <li>Start meni u donjem levom uglu</li>
+                                <li>Taskbar na dnu ekrana</li>
+                                <li>Sistemsku traku sa ikonama</li>
+                                <li>Jasnu organizaciju aplikacija</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Za razliku od standardnog GNOME-a, Zorin je prilagodio interfejs tako da ne deluje „drugačije“ ili eksperimentalno. Sve je jednostavno i logično raspoređeno.
+                            </p>
+                            <hr>
+                            <h4>Zorin Appearance - promena izgleda jednim klikom</h4>
+                            <p>
+                                Jedna od najzanimljivijih stvari kod Zorina je aplikacija <strong>Zorin Appearance</strong>.
+                                Uz nju možeš da promeniš kompletan izgled sistema bez instaliranja tema ili dodatnih podešavanja.
+                                U Core verziji dobijaš 4 osnovna layouta:
+                            </p>
+                            <ul>
+                                <li>Windows 11 stil</li>
+                                <li>Windows 7 stil</li>
+                                <li>macOS stil</li>
+                                <li>Touch raspored za ekrane osetljive na dodir</li>
+                            </ul>
+                            <p>
+                                <strong>U Pro verziji dostupno je čak 18 različitih layouta.</strong>
+                            </p>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Najbolje od svega - promena traje nekoliko sekundi i ne zahteva restart sistema.
+                            </p>
+                            <hr>
+                            <h4>Zorin OS Lite - Xfce radno okruženje</h4>
+                            <p>
+                                Lite verzija koristi <strong>Xfce desktop</strong>. To znači:
+                            </p>
+                            <ul>
+                                <li>Manja potrošnja RAM-a</li>
+                                <li>Brži rad na slabijem hardveru</li>
+                                <li>Jednostavan i klasičan izgled</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Xfce možda ne izgleda toliko moderno kao GNOME varijanta u Core verziji, ali je stabilan, brz i veoma prilagodljiv.
+                            </p>
+                            <hr>
+                            <h4>Koliko je prilagodljiv</h4>
+                            <p>
+                                Zorin nije distribucija koja te zatrpava komplikovanim podešavanjima, ali nudi dovoljno fleksibilnosti:
+                            </p>
+                            <ul>
+                                <li>Promena tema (svetla/tamna)</li>
+                                <li>Podešavanje ikona</li>
+                                <li>Organizacija panela</li>
+                                <li>Promena fontova</li>
+                                <li>Dodavanje dock-a ili uklanjanje taskbara</li>
+                            </ul>
+                             <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Možeš ga ostaviti u podrazumevanom stanju i sve će raditi lepo, ali ako voliš da prilagođavaš sistem - imaš tu mogućnost.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="softwer">
+                            <h4>Softwer i aplikacije</h4>
+                            <p>
+                                Jedna od dobrih stvari kod Zorin OS-a je to što ne dobiješ “prazan” sistem koji moraš satima da podešavaš.
+                                Već nakon instalacije imaš sve što je potrebno za svakodnevni rad.
+                                Ne moraš odmah da tražiš dodatne programe - možeš da sedneš i koristiš računar.
+                            </p>
+                            <h4>Programi koji dolaze uz sistem</h4>
+                            <p>
+                                Zorin OS dolazi sa pažljivo odabranim osnovnim aplikacijama:
+                            </p>
+                            <ul>
+                                <li>Firefox za internet</li>
+                                <li>LibreOffice paket za dokumente, tabele i prezentacije</li>
+                                <li>Media player za muziku i video</li>
+                                <li>Program za pregled fotografija</li>
+                                <li>Alat za arhive (zip, rar, itd.)</li>
+                                <li>Software centar za instalaciju novih programa</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sve je već podešeno i spremno za korišćenje.
+                            </p>
+                            <hr>
+                            <h4>Instalacija novih programa</h4>
+                            <p>
+                               Instalacija samog softvera je jednostavna. Kroz Software aplikaciju možeš da pretražuješ programe i instaliraš ih jednim klikom.
+                               Zahvaljujući Ubuntu osnovi, dostupne su hiljade aplikacija:
+                            </p>
+                            <ul>
+                                <li>Google Chrome</li>
+                                <li>VLC</li>
+                                <li>GIMP</li>
+                                <li>Steam</li>
+                                <li>Visual Studio Code</li>
+                                <li>i mnoge druge</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sve se instalira bez odlaska na sumnjive sajtove i bez ručnog skidanja .exe fajlova.
+                            </p>
+                            <hr>
+                            <h4>Podrška za Windows aplikacije</h4>
+                            <p>
+                                Zorin OS ima ugrađene alate koji omogućavaju pokretanje mnogih Windows programa. Kada pokušaš da pokreneš .exe fajl, sistem će ti ponuditi instalaciju potrebne podrške.
+                                Naravno, ne rade baš svi programi savršeno, ali veliki broj popularnih aplikacija funkcioniše bez problema. 
+                            </p>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ovo je velika prednost za ljude koji prelaze sa Windows-a.
+                            </p>
+                            <hr>
+                            <h4>Flatpak i dodatni izvori softvera</h4>
+                            <p>
+                               Zorin OS podržava Flatpak pakete, što znači da možeš instalirati i najnovije verzije aplikacija nezavisno od sistemskih repozitorijuma.
+                            </p>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> To daje veću fleksibilnost i širi izbor softvera.
+                            </p>
+                            <hr>
+                            <h4>Ažuriranje sistema</h4>
+                            <p>
+                                Ažuriranja su jednostavna i jasna. Sistem te obavesti kada postoji update, a instalacija traje par minuta.
+                                Ne postoje iznenadni restartovi ili prisilna ažuriranja kao na nekim drugim sistemima.
+                            </p>
+                            <hr>
+                            <h4>Da li ima dovoljno programa</h4>
+                            <p>
+                               U praksi - da. Za internet, kancelarijski rad, multimediju, učenje, pa čak i programiranje - postoji veliki izbor kvalitetnih aplikacija.
+                               Ako dolaziš sa Windows-a, možda ćeš morati da se navikneš na neke alternative, ali većina njih je besplatna i radi odlično.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="bezbednost">
+                            <h4>Bezbednost i Ažuriranja</h4>
+                            <p>
+                                Ako prelaziš sa Windows-a, verovatno ti je jedna od prvih briga - da li je sistem bezbedan?
+                                Kod Zorin OS-a bezbednost je ugrađena u sam način na koji Linux funkcioniše. Ne moraš da instaliraš deset dodatnih programa da bi bio miran.
+                            </p>
+                            <h4>Manji rizik od virusa</h4>
+                            <p>
+                                Zorin OS je zasnovan na Linux sistemu, koji je prirodno otporniji na viruse i malware u poređenju sa Windows-om.
+                                To ne znači da je nemoguće dobiti virus, ali u praksi je rizik znatno manji. Većina zlonamernih programa jednostavno nije napravljena za Linux.
+                                Za običnog kućnog korisnika antivirus najčešće nije ni potreban.
+                            </p>
+                            <hr>
+                            <h4>Nema prikupljanja podataka i reklama</h4>
+                            <p>
+                                Zorin OS ne prikazuje reklame i ne prati tvoje aktivnosti. Ne postoje skriveni procesi koji šalju podatke o tome šta radiš na računaru. 
+                                Sistem je napravljen tako da poštuje privatnost korisnika.
+                            </p>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Tvoj računar je zaista tvoj.
+                            </p>
+                            <hr>
+                            <h4>Redovna i bezbedonosna ažuriranja</h4>
+                            <p>
+                                Zorin OS dobija redovna ažuriranja zahvaljujući Ubuntu LTS osnovi. To znači:
+                            </p>
+                            <ul>
+                                <li>Ispravke bezbednosnih propusta</li>
+                                <li>Poboljšanja stabilnosti</li>
+                                <li>Ispravke grešaka u programima</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sistem će te obavestiti kada postoji ažuriranje. Instalacija traje nekoliko minuta i uglavnom ne zahteva restart (osim kod većih sistemskih nadogradnji).
+                            </p>
+                            <hr>
+                            <h4>Nema prisilnih restartova</h4>
+                            <p>
+                                Jedna od stvari koju početnici brzo primete - nema iznenadnih restartova usred rada. Ti odlučuješ kada ćeš instalirati ažuriranja i kada ćeš restartovati računar.
+                            </p>
+                            <hr>
+                            <h4>Dugoročna podrška</h4>
+                            <p>
+                                Zorin OS 18 je zasnovan na Ubuntu 24.04 LTS verziji, što znači da će dobijati bezbednosna ažuriranja do 2029. godine.
+                                Ne moraš da menjaš sistem svake godine da bi ostao bezbedan.
+                            </p>
+                            <hr>
+                            <h4>Da li treba da radiš nešto posebno?</h4>
+                            <p>
+                                Za većinu korisnika - ne. Dovoljno je da:
+                            </p>
+                            <ul>
+                                <li>Redovno instaliraš ažuriranja</li>
+                                <li>Ne instaliraš programe sa nepoznatih izvora</li>
+                                <li>Koristiš jake lozinke</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sistem je napravljen tako da bude bezbedan i bez komplikovanih podešavanja.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="zajednica">
+                            <h4>Zajednica i podrška</h4>
+                            <p>
+                                Jedna od velikih prednosti Zorin OS-a nije samo sam sistem, već i ljudi koji stoje iza njega.
+                                Ako si početnik, verovatno ćeš pre ili kasnije imati neko pitanje. Dobra vest je da retko kada ostaješ bez odgovora.
+                            </p>
+                            <h4>Zvanični Zorin forumi</h4>
+                            <p>
+                                Zorin OS ima svoj zvanični forum na kome korisnici postavljaju pitanja, dele iskustva i pomažu jedni drugima.
+                                Ako naiđeš na problem, velika je šansa da je neko već imao isto pitanje i da rešenje već postoji.
+                                A ako ne postoji — možeš postaviti svoje pitanje i obično dobiješ odgovor prilično brzo.
+                                Zajednica je uglavnom prijateljska i spremna da pomogne, posebno početnicima.
+                            </p>
+                            <hr>
+                            <h4>Ubuntu zajednica</h4>
+                            <p>
+                                Pošto je Zorin OS zasnovan na Ubuntu sistemu, možeš koristiti i ogromnu Ubuntu dokumentaciju i forume.
+                                To znači da, čak i ako ne pronađeš rešenje direktno za Zorin, često će Ubuntu uputstva raditi bez problema.
+                                U praksi, to ti daje pristup ogromnoj bazi znanja i tutorijala.
+                            </p>
+                            <hr>
+                            <h4>Vodiči i YouTube tutorijali</h4>
+                            <p>
+                                Zorin OS je postao popularan poslednjih godina, pa postoji mnogo vodiča, blogova i video tutorijala.
+                                Od instalacije, podešavanja sistema, pa do rešavanja konkretnih problema — gotovo sve je već objašnjeno negde na internetu.
+                            </p>
+                            <hr>
+                            <h4>Plaćena podrška (Pro verzija)</h4>
+                            <p>
+                                Ako kupiš Pro verziju, dobijaš i prioritetnu podršku od Zorin tima.
+                                To znači da možeš direktno kontaktirati tim za pomoć oko problema ili instalacije.
+                                Za većinu kućnih korisnika zajednica je sasvim dovoljna, ali lepo je znati da postoji i ova opcija.
+                            </p>
+                            <hr>
+                            <h4>Da li je Zorin dobar za početnike?</h4>
+                            <p>
+                               <strong>DA!</strong> Zajednica je strpljiva, sistem je stabilan, a većina problema ima jednostavno rešenje.
+                                Ne moraš biti stručnjak da bi koristio Zorin OS.
+                                Ako nešto zapne — verovatno nisi prvi kome se to desilo.
+                            </p>
+                            <hr>
+                            <h4>Zaključak</h4>
+                            <p>
+                                Zorin OS je distribucija koja pokušava da olakša prelazak na Linux. Ne menja stvari samo da bi bio drugačiji, ne komplikuje interfejs i ne zahteva tehničko znanje da bi radio kako treba. <br /><br />
+                                Ako dolaziš sa Windows-a, verovatno ćeš se vrlo brzo snaći. Sistem izgleda poznato, radi stabilno i ne traži mnogo podešavanja nakon instalacije. 
+                                Za svakodnevne stvari — internet, dokumenta, filmove, muziku — sve je već spremno. <br /><br />
+                                Za starije računare postoji Lite verzija, za dodatne opcije Pro verzija, a za većinu korisnika Core je sasvim dovoljan. <br /><br />
+                                Naravno, nijedan sistem nije savršen i možda ćeš naići na situaciju gde neki Windows program ne radi identično kao pre. 
+                                Ali za veliki broj ljudi, Zorin OS može biti jednostavnija, brža i mirnija alternativa. <br /><br />
+                                Ako želiš stabilan, moderan i bezbedan operativni sistem bez nepotrebnih komplikacija — Zorin OS je vredan probanja.
+                            </p>
+                            
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong>  Najbolje od svega? Možeš ga isprobati sa USB-a bez instalacije i sam videti da li ti odgovara.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="pitanja">
+                            
+                            <div class="accordion" id="accordionExample">
+                                <h4>Pitanja i odgovori</h4>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <p>
+                                            <strong>1. Da li je Zorin OS potpuno besplatan?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>DA</strong>. Zorin OS Core, Lite i Education verzije su potpuno besplatne. 
+                                            Postoji i Pro verzija koja se plaća jednokratno, ali nije obavezna za korišćenje sistema.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <p>
+                                            <strong>2. Da li Zorin OS može da zameni Windows?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Za većinu svakodnevnih stvari - <strong>DA</strong>.
+                                            Internet, dokumenti, filmovi, muzika, programiranje - sve to radi bez problema.
+                                            Ako koristiš specifične Windows programe, treba proveriti da li imaju Linux verziju ili da li rade putem Wine-a.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <p>
+                                            <strong>3. Da li mogu da pokrenem Windows programe?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Mnoge Windows aplikacije mogu da rade uz pomoć ugrađene podrške (Wine).
+                                            Nisu svi programi 100% kompatibilni, ali veliki broj popularnih aplikacija funkcioniše sasvim dobro.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <p>
+                                            <strong>4. Da li je Zorin OS bezbedan?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Da</strong>. Zorin OS je zasnovan na Linux sistemu, koji je prirodno otporniji na viruse.
+                                            Dobija redovna bezbednosna ažuriranja i u praksi ne zahteva antivirus kao Windows.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <p>
+                                            <strong>5. Da li će raditi na starom računaru?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                           Vrlo verovatno da hoće. Ako imaš stariji računar, Zorin OS Lite verzija je posebno namenjena slabijem hardveru i može raditi i sa 2 GB RAM-a.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <p>
+                                            <strong>6. Da li je težak za korišćenje ako nikada nisam koristio Linux?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Ne</strong>. Zorin OS je napravljen baš za početnike. Izgled je poznat, podešavanja su jednostavna i većina stvari funkcioniše bez dodatne konfiguracije.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        <p>
+                                            <strong>7. Da li moram da brišem Windows da bih instalirao Zorin?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Ne moraš</strong>. Možeš instalirati Zorin pored Windows-a (dual boot) i birati sistem pri pokretanju računara.
+                                            Takođe ga možeš isprobati sa USB-a bez instalacije.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        <p>
+                                            <strong>8. Koliko često dolaze ažuriranja?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Bezbednosna ažuriranja dolaze redovno.
+                                            Glavne verzije izlaze otprilike na svake dve godine, a podrška traje 5 godina.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        <p>
+                                            <strong>9. Da li su potrebni posebni drajveri?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                           U većini slučajeva ne.
+                                           Zorin OS automatski prepoznaje hardver i instalira potrebne drajvere. Kod NVIDIA grafike može biti potrebno dodatno podešavanje, 
+                                           ali sistem obično sam ponudi instalaciju.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        <p>
+                                            <strong>10. Da li Zorin OS dobar za igre?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Za osnovne i mnoge Steam igre - <strong>DA</strong>. 
+                                            Uz Steam i Proton podršku moguće je igrati veliki broj Windows igara.
+                                            Za ozbiljan gejming i najnovije AAA naslove, Windows i dalje ima prednost, ali situacija se stalno poboljšava.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#top" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                            
+                        </div>
+                    </div>
+                    
+                </main>
+            </div>
+        </div>
+        <!--Tabs/Pane-->
+        <!--Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Šabac
+                            <br />
+                            15000
+                            <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45321.530063269056!2d19.638790483094247!3d44.768660981005254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475bcae3dfdcb3cd%3A0x73a997a93228cdf2!2z0KjQsNCx0LDRhg!5e0!3m2!1ssr!2srs!4v1769966968881!5m2!1ssr!2srs" 
+                            width="400" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/dejanjankovic_/" target="_blank"><i class="fab fa-fw fa-square-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/dejan.jankovic.874580" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/@Jankovic_12345" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">O SAJTU</h4>
+                        <p class="lead mb-0">
+                            Nov si u Linuxu! Na pravom si mestu. Prvi koraci ne moraju biti teški. Ovde ćeš pronaći jasne vodiče, savete i primere koji će ti pomoći da sa sigurnošću započneš. <br /> <br />
+                            Ovaj sajt je namenjen novim Linux korisnicima, sa ciljem da im pomogne da lakše naprave svoje prve korake i upoznaju se sa open-source svetom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer-->
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Dejan Janković 2026. All right reserved</small></div>
+        </div>
+        <!-- End Copyright Section-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>  
+</body>
+</html>

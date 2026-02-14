@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Istorija Linuxa: Saznajte kako je Linus Torvalds stvorio Linux kernel, povezanost sa GNU projektom, razvoj distribucija i uticaj Linuxa u modernom svetu.">
+    <meta name="author" content="Dejan Janković" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <title>Ubuntu</title>
+</head>
+<body class="ubuntu" id="top">
+    <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase sticky-top" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html#page-top">Start Linux</a>
+                    <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#page-top">Home</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio">Commands</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#about">About</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#contact">Contact</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="linux_&_facts.html">Linux Facts</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="distribucije.html">Distributions</a></li>
+                            <li class="nav-item dropdown mx-0 mx-lg-1">
+                            <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded" href="#" id="navbarDistros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Distribution Guide
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDistros">
+                                <li><a class="dropdown-item ubuntu" href="ubuntu.html">Ubuntu</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item linux_mint" href="linux_mint.html">Linux Mint</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item zorin_os" href="zorin_os.html">Zorin OS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item elementary" href="elementary.html">elementary OS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item pop" href="pop.html">PoP!_OS</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+        <!-- End Navigation-->
+        <!-- Header-->
+        <header class="text-center fs-1 mt-5">
+            <h1 class="fs-1 fw-semibold text-uppercase">UBUNTU</h1>
+            <figure class="text-center">
+                <blockquote class="blockquote">   
+                    <p class="fs-5 fst-italic text-uppercase fw-bold" style="color: #E95420;">"Neka tvoj računar radi za tebe"</p>
+                </blockquote>  
+            </figure>
+        </header>
+        <!-- End Header-->
+        <!--Tabs/Pane-->
+        <div class="container mt-5">
+            <div class="row">
+                <aside class="col-4">
+                    <div class="nav nav-pills flex-column fs-5" id="ubuntu-tabs" role="tablist">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#uvod">
+                            <i class="bi bi-info-circle me-3"></i>
+                            Uvod
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#instalacija">
+                            <i class="bi bi-gear-fill me-3"></i>
+                            Instalacija
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#verzije">
+                             <i class="bi bi-folder me-3"></i>
+                            Verzije
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#prednosti">
+                            <i class="bi bi-check-circle me-3"></i>
+                            Prednosti
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sistemski_zahtevi">
+                            <i class="bi bi-laptop me-3"></i>
+                            Sistemski zahtevi
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#okruženje">
+                            <i class="bi bi-display me-3"></i>
+                            Radno okruženje
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#softwer">
+                            <i class="bi bi-box-seam me-3"></i>
+                            Softwer i aplikacije
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#bezbednost">
+                            <i class="bi bi-shield-check me-3"></i>
+                            Bezbednost i Ažuriranja
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#zajednica">
+                            <i class="bi bi-chat-dots me-3"></i>
+                            Zajednica i podrška
+                        </button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pitanja">
+                             <i class="bi bi-question-circle me-3"></i>
+                            Česta pitanja
+                        </button>
+                    </div>
+                </aside>
+                <main class="col-8">
+                    <div class="tab-content">
+
+                        <div class="tab-pane fade show active mb-5" id="uvod">
+                            <h4>O SAMOJ DISTRIBUCIJI</h4>
+                            <p>
+                                <strong>Ubuntu</strong> je jedan od najpoznatijih i najkorišćenijih Linux operativnih sistema na svetu. Razvijen je sa idejom da bude 
+                                <strong>jednostavan, stabilan i dostupan svima</strong>. Ubuntu pretstavlja savršen balans između moći Linuxa i lakoće korišćenja koja je potrebna početnicima.
+                                Namenjen je kako korisnicima koji se prvi put susreću sa Linuxom, tako i iskusnijima koji žele pouzdan sistem za svakodnevni rad, programiranje, učenje ili serverska resenja.
+                                <br /><br />
+                                Ono što Ubuntu izdvaja od drugih distribucija jeste njegov fokus na <strong>korisničko iskustvo</strong>. Instalacija je jednostavna, interfejs moderan i pregledan, a već makon prvog pokretanja
+                                korisnik dobija kompletno funkcionalan sistem sa osnovnim aplikacijama za rad, internet i multimediju. Ubuntu se redovno ažurira, ima jasnu strukturu verzija i dugoročnu podršku (LTS), što ga čini
+                                sigurnim izborom za one koji žele stabilnost bez čestih promena.
+                                <br /><br />
+                                Ubuntu je <strong>open source</strong> projekat, što znači da je potpuno besplatan i da ga razvija globalna zajednica progranera, uz podršku kompanije Canonical. Ovakav model razvoja omogućava
+                                brzo ispravljanje grešaka, visok nivo bezbednosti i stalno unapređenje sistema. Zahvaljujući ogromnoj zajednici korisnika, Ubuntu ima bogatu dokumentaciju, forume i vodiče, pa je pomoć uvek lako dosrupna.
+                                <br /><br />
+                                Još jedna velika prednost Ubuntu-a ke njegova <strong>svestranost</strong>. Može se koristiti na kućnim računarima, lap topovima, starijem hardveru, ali i na serverima, u cloud okruženjima i za razvoj softvera.
+                                Podržava veliki broj aplikacija, a instalacija programa je jednostavna i bezbedna zahvaljujući zvaničnim repozitorijumima i Ubuntu Software centru.
+                                <br /><br />
+                                Ako tražiš operativni sistem koji je pouzdan, moderan i prilagođen učenju i radu, Ubuntu je često prvi i najbolji korak u Linux Svetu. Na ovoj stranici ćeš pronaći detaljne informacije o Ubuntu-u, njegovim verzijama,
+                                instalaciji, prednostima i svemu što je potrebno da bez problema započneš njegovo korišćenje.
+
+                            </p>
+                        </div>
+
+                        <div class="tab-pane fade" id="instalacija">
+                            <h4>KAKO INSTALIRATI UBUNTU - kompletan vodič od početka do kraja</h4>
+                            <p>
+                                Ako želiš da isprobaš Linux ili da pređeš sa Windowsa na nešto stabilno, sigurno i besplatno, Ubuntu je jedan od najboljih izbora.
+                                U nastavku ću objasniti ceo proces instalacije korak po korak, bez komplikovanja i tehničkih izraza koje niko ne razume.
+                            </p>
+                            <br />
+                            <h4>1. Odlazak na zvanični Ubuntu sajt</h4>
+                            <p>
+                                Prvi korak je da odeš na zvanični Ubuntu sajt. U internet pregledač (Chrome, Firefox, Edge...) ukucaj <strong>https://ubuntu.com</strong>. Kada se stranica učita, u meniju
+                                klikni na <strong>Download</strong>, a zatim izaberi <strong>Ubuntu Desktop</strong>. Ovo je verzija namenjena običnim korisnicima, sa grafičkim okruženjem, idealna za svakodnecni rad.
+                            </p>
+                            <hr>
+                            <h4>2. Preuzimanje Ubuntu ISO fajla</h4>
+                            <p>
+                                Na stranici za preuzimanje videćeš dugme za skidanje najnovije <strong>LTS (Long Term Support)</strong> verzije. LTS verzije su najstabilnije i preporučuju se početnicima.
+                                Klikni na <strong>Download</strong> i sačekaj da se ISO fajl preuzme. Fajl je veličine oko 3 - 4 GB, pa može potrajati nekoliko minuta u zavisnosti od brzine interneta. <br /><br />
+                                <strong>ISO fajl je zapravo "slika" instaloacionog diska Ubuntua</strong>.
+                            </p>
+                            <hr>
+                            <h4>3. Preuzimanje programa Balena Etcher</h4>
+                            <p>
+                                Da bi mogao da instaliraš ubuntu, potreban ti USB fleš (minimum 8GB) i program koji će ISO fajl prebaciti na USB tako da on postane instalacioni. Jedan od najjednostavnijih programa za to je <strong>Balena Etcher</strong>.
+                                Otvori sajt <strong>https://balena.io/etcher/</strong>. Klikni na <strong>Download Etcher</strong> i preuzmi verziju za svoj operativni sistem (Windows, macOS ili Linux). Nakon preuzimanja, instaliraj program kao i bilo koji drugi.
+                            </p>
+                            <hr>
+                            <h4>4. Pravljenje bootabilnog USB-a</h4>
+                            <p>
+                                Uključi USB fleš u računar i pokreni Balena Etcher. Postupak je veoma jednostavan:
+                            </p>
+                            <ul>
+                                <li>Klikni na <strong>Flash from file</strong> i izaberi Ubntu ISO fajl koji si preuzeo</li>
+                                <li>Klikni na <strong>Select target</strong> i izaberi svoj USB fleš</li>
+                                <li>Klikni na <strong>Flash</strong></li>
+                            </ul>
+                            <p>
+                                Sačekaj da se proces završi. Može potrajati nekoliko minuta. Kada je gotovo, USB je spreman za instalaciju Ubuntua.
+                            </p>
+                            <hr>
+                            <h4>5. Pokretanje računara sa USB-a</h4>
+                            <p>
+                                Sada je potrebno da restartuješ računar i da ga podesiš da se pokrene sa USB-a. Tokom paljenja računara, pritiskaj taster kao što su <strong>F12, F10, ESC ili DEL</strong> (zavisi od proizvođača).
+                                Otvoriće se meni za izbor uređaja za pokretanje. Izaberi USB fleš i potvrdi.
+                            </p>
+                            <hr>
+                            <h4>6. Pokretanje Ubuntu instalacije</h4>
+                            <p>
+                                Nakon toga će se pojaviti ubuntu ekran. Imaćeš dve opcije:
+                            </p>
+                            <ul>
+                                <li><strong>Try Ubuntu</strong></li>
+                                <li><strong>Install Ubuntu</strong></li>
+                            </ul>
+                            <p>
+                               Ako  želiš odmah da instaliraš sistem, izaberi <strong>Install Ubuntu</strong>. Zatim sledi nekoliko jednostavnih koraka:
+                            </p>
+                            <ul>
+                                <li>Izaberi jezik</li>
+                                <li>Izaberi raspored tastature</li>
+                                <li>Izaberi normalnu instalaciju</li>
+                                <li>Možeš čekirati opciju za instalaciju dodatnih drajvera i ažuriranja</li>
+                            </ul>
+                            <hr>
+                            <h4>7. Izbor diska i instalacija sistema</h4>
+                            <p>
+                                U sledećem koraku biraš gde će se Ubuntu instalirati. Ako želiš da orišeš sve sa diska i koristiš samo Ubuntu, izaberi opciju:
+                            </p>
+                            <ul>
+                                <li><strong>Erase disk and install Ubuntu</strong></li>
+                            </ul>
+                            <p>
+                                Ako imaš Windows i želiš <strong>dual boot</strong>, Ubuntu će to automatski prepoznati i ponuditi opciju instalacije pored Windowsa. Potvrdi izbor i nastavi dalje.
+                            </p>
+                            <hr>
+                            <h4>8. Podešavanje korisnika</h4>
+                            <p>
+                                Sada unosiš:
+                            </p>
+                            <ul>
+                                <li><strong>Svoje ime</strong></li>
+                                <li><strong>Ime računara</strong></li>
+                                <li><strong>Korisničko ime</strong></li>
+                                <li><strong>Lozinku</strong></li>
+                            </ul>
+                            <p>
+                                Izaberi da li želiš automatsko prijavljivanje ili unos lozinke prilikom svakog paljenja računara.
+                            </p>
+                            <hr>
+                            <h4>9. Završetak instalacije</h4>
+                            <p>
+                                Kada sve to završiš, instalacija će početi. Ceo proces traje oko 10 - 20 minuta. kada se instalacija završi, bićeš obavešten da možeš da restartuješ računar.
+                                Izvadi USB fleš i klikni na <strong>Restart Now</strong>.
+                            </p>
+                            <hr>
+                            <h4>10. Prvo pokretanje Ubuntua</h4>
+                            <p>
+                                Nakon restarta, Ubuntu će se podići sa hard diska. Prijavi se korisničkim podacima koje si napravio i to je to - <strong>UBUNTU JE USPEŠNO INSTALIRAN</strong>.
+                            </p>
+                            <hr>
+                            <br />
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="verzije">
+                            <h4>Verzije Ubuntu-a</h4>
+                            <p>
+                                Ubuntu je jedan od najpopularnijih Linux operativnih sistema. Svaka nova verzija donosi nove funkcije, bolje performanse i poboljšanu stabilnost. Ubuntu ima dve vrste izdanja:
+                            </p>
+                            <ul>
+                                <li><strong>LTS(Long-Term-Support)</strong> - ovo su verzije sa dugoročnom podrškom, obično 5 godina. Idealne su ako želiš stabilan sistem koji ne moraš često da ažuriraš.</li>
+                                <li><strong>Standardne verzije</strong> - izlaze <strong>dva puta godišnje</strong> obično u aprilu i oktobru i podržane su oko 9 meseci. Donose najnovije funkcije, ali zahtevaju češća ažuriranja.</li>
+                            </ul>
+                            <p>
+                                Najpoznatije LTS verzije su: <strong>16.04 Xenial Xerus, 18.04 Bionic Beaver, 20.04 Focal Fossa, 22.04 Jammy Jellyfish</strong> i najnovija <strong>24.04 Noble Numbat</strong>.
+                                Svaka verzija ima broj (npr.24.04) koji pokazuje godinu i mesec izlaska i kodno ime (npr.Noble Numbat) koje je obično neka životinja sa pridevom.
+                            </p>
+                            <hr>
+                            <h4>Popularni derivati</h4>
+                            <p>
+                                Osim standardnog Ubuntu-a, postoje i <strong>popilarni derivati</strong>. Oni koriste istu osnovu Ubuntu-a, ali nude drugačije radno okruženje ili funkcije:
+                            </p>
+                            <ul>
+                                <li><strong>Kubuntu</strong> - koristi moderan <strong>KDE Plasma desktop</strong>, sa mnogo opcija za prilagošđavanje i lepim izgledom. Odlično za korisnike koji vole vizuelno atraktivne sisteme.</li>
+                                <li><strong>Lubuntu</strong> - lagan i brz, sa <strong>LXQt desktopom</strong>, idealan za starije računare ili uređaje sa malo resursa.</li>
+                                <li><strong>Xubuntu</strong> - takođe lagan, ali sa <strong>XFCE desktopom</strong> stabilan i prilagodljiv. Dobar balans između brzine i funkcionalnosti.</li>
+                                <li><strong>Ubuntu MATE</strong> - koristi <strong>MATE desktop</strong>, koji podseća na klasičan Linux izgled. Jednostavan je i intuitivan za korišćenje.</li>
+                                <li><strong>Ubuntu Studio</strong> - namenjen je za <strong>multimediju</strong>: dolazi sa unapred instaliranim alatima za audio, video, grafiku i fotografiju. Odličan za kreativce.</li>
+                                <li><strong>Ubuntu Budgie</strong> - moderan i elegantan <strong>Budgie desktop</strong>, jednostavan za korišćenje, sa minimalističkim i lepim interfejsom.</li>
+                                <li><strong>Ubuntu Kylin</strong> - verzija Ubuntu-a prilagođena kineskim korisnicima, sa specifičnim aplikacijama i interfejsom.</li>
+                            </ul>
+                            <hr>
+                            <h4>Kako izabrati verziju ili derivat?</h4>
+                            <ul>
+                                <li>Ako želiš <strong>stabilan sistem za učenje i svakodnevni rad -></strong> uzmi poslednju LTS verziju Ubuntu-a (npr. 24.04)</li>
+                                <li>Ako želiš <strong>lagan i brz sistem za stariji računar -></strong> probaj Lubuntu ili Xubuntu.</li>
+                                <li>Ako voliš <strong>lep i moderan desktop sa puno opcija -></strong> Kubuntu ili Ubuntu Budgie.</li>
+                                <li>Ako se baviš <strong>multimediom ili kreativnim radom -></strong> Ubuntu Studio je idealan.</li>
+                                <li>Ako voliš <strong>klasičan Linux izgled -></strong> Ubuntu MATE je odličan izbor.</li>
+                            </ul>
+                            <p>
+                                Svi ovi derivati koriste istu osnovu i mogu instalirati iste programe, tako da je razlika uglavnom u <strong>izgledu i načinu rada</strong>.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="prednosti">
+                            <h4>Prednosti Ubuntu-a</h4>
+                            <p>Ubuntu je odličan izbor za sve koji ulaze u svet Linuxa, ali i za iskusnije korisnike. Njegove prednosti su u jednostabnosti, stabilnosti i velikoj zajednici koja stoji iza njega.</p>
+                            <hr>
+                            <h4>Jednostavan za koriščenje</h4>
+                            <p>
+                                Ubuntu ima moderan i jednostavan interfejs koji je lako razumljiv čak i korisnicima koji prvi put koriste Linux. Osnovne stvari poput instalacije programa, podešavanja sistema i svakodnevnog rada
+                                mogu se obaviti bez korisćenja terminala.
+                            </p>
+                            <hr>
+                            <h4>Besplatan i otvorenog koda</h4>
+                            <p>
+                                Ubuntu je porpuno besplatan. Možeš ga slobodno preuzeti, koristiti i instalirati na koliko god računara želiš. Pošto je otvorenog koda, sistem se stalno unapređuje
+                                uz pomoć zajednice širom sveta.
+                            </p>
+                            <hr>
+                            <h4>Stabilan i pouzdan</h4>
+                            <p>
+                                Posebno LTS verzije Ubuntu-a poznete su po stabilnosti. Sistem radi pouzdano, retko dolazi do rušenja, a ažuriranja su proverena i bezbedna.
+                            </p>
+                            <hr>
+                            <h4>Velika zajednica i dobra dokumentacija</h4>
+                            <p>
+                                Ubuntu ima ogromnu zajednicu korisnika. To znači da za skoro svaki problem postoji rešenje na forumima, blogovima i zvaničnoj dokumentaciji.
+                                Početnici nikada nisu prepušteni sami sebi.
+                            </p>
+                            <hr>
+                            <h4>Bezbedan sistem</h4>
+                            <p>
+                                Ubuntu je manje izčožen virusima i zlonamernom softveru u poređenju sa nekim drugim operativnim sistemima. Redovna bezbedonosna ažuriranja dodatno štite korisnike.
+                            </p>
+                            <hr>
+                            <h4>Brz i efikasan</h4>
+                            <p>
+                                Ubuntu dobro koristi resurse računara. Postoje i laganije veryije (poput Lubuntu i Xubuntu) koje odlično rade čak i na starijim mašinama.
+                            </p>
+                            <hr>
+                            <h4>Veliki izbor softvera</h4>
+                            <p>
+                                Većina programa potrebnih za svakodnevni rad dolazi unapred instalirana ili je dostupna kroe Software Centar. Postoje alternative za skoro sve popularne programe- 
+                                za internet, kancelariju, multimediju i programiranje.
+                            </p>
+                            <hr>
+                            <h4>Odličan za učenje i programiranje</h4>
+                            <p>
+                                Ubuntu je vrlo popularan među programerima i IT profesionalcima. Podržava veliki broj programskih jezika i alata, što ga čini idealnim za učenje i razvoj.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="sistemski_zahtevi">
+                            <h4>Sistemski zahtevi</h4>
+                            <p>
+                                Pre instalacije Ubuntu-a važno je da znas kakav računar ti je potreban. Dobra vest je da Ubuntu može raditi i na slabijim mašinama, a postoje i lakše verzije za slabije računare.
+                            </p>
+                            <h4>Minimalni sistemski zahtevi</h4>
+                            <p>
+                                Ovi zahtevi su dovoljni da Ubuntu radi, ali bez velikog komfora:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> dvojezgarni (64-bitni)</li>
+                                <li><strong>RAM memorija:</strong> 2 GB</li>
+                                <li><strong>Prostor na disku:</strong> najmanje 25 GB</li>
+                                <li><strong>Grafika:</strong> podrška za osnovnu rezoluciju (integrisana grafika je dovoljna)</li>
+                                <li><strong>Internet konekcija:</strong> preporučena za ažuriranja i instalaciju programa</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ubuntu će raditi, ali može biti sporiji, naročito ako koristiš više programa odjednom.
+                            </p>
+                            <hr>
+                            <h4>Preporučeni sistemski zahtevi (prijatno iskustvo)</h4>
+                            <p>
+                                Za glatko i ugodno korišćenje Ubuntu-a:
+                            </p>
+                            <ul>
+                                <li><strong>Procesor:</strong> četvorojezgarni ili bolji</li>
+                                <li><strong>RAM memorija</strong> 4 GB i više</li>
+                                <li><strong>Prostor na disku:</strong> 30 GB i više</li>
+                                <li><strong>SSD disk:</strong> preporučen za brži rad sistema</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sa ovakvom konfiguracijom Ubuntu radi brzo i stabilno u svakodnevnom radu.
+                            </p>
+                            <hr>
+                            <h4>Sistemski zahtevi za laganije verzije Ubuntu-a</h4>
+                            <p>
+                                Ako imaš stariji računar, možeš koristiti lakše Ubuntu derivate:
+                            </p>
+                            <ul>
+                                <li>
+                                    Ubuntu/Xubuntu
+                                    <ul>
+                                        <li>
+                                            1-2 GB <strong>RAM-a</strong>
+                                        </li>
+                                        <li>
+                                            slabiji procesor
+                                        </li>
+                                        <li>
+                                            manje opterećenje sistema
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ove verzije su idealne za starije laptopove i desktop računare koji više ne mogu da pokrenu moderne operativne sisteme bez problema.
+                            </p>
+                            <hr>
+                            <h4>Vazna napomena za početnike</h4>
+                            <p>
+                                Ako nisi siguran da li će Ubuntu raditi na tvom računaru, možeš ga <strong>isprobati bez instalacije</strong> koristeći opciju <strong>"Try Ubuntu".</strong>
+                                Tako možeš proveriti da li sve funkcioniše pre nego što doneseš konačnu odluku. 
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="okruženje">
+                            <h4>Radno okruženje</h4>
+                            <p>
+                                Radno okruženje (desktop eviroment) je ono sto vidiš i koristiš svaki dan - izgled sistema, meni, paneli, ikonice i način na koji pokrećeš programe. Na Ubuntu postoji više 
+                                radnih okruženja, a svako ima svoj stil i način rada.
+                            </p>
+                            <h4>GNOME (podrazumevano okruženje)</h4>
+                            <p>
+                                Standardni Ubuntu koristi <strong>GNOME</strong> radno okruženje. Ono je moderno, čisto i fokusirano na jednostavnost.
+                            </p>
+                            <ul>
+                                <li>Ima minimalistički dizajn i pregledan interfejs</li>
+                                <li>Lako se koristi i bez mnogo podešavanja</li>
+                                <li>Dobar izbor za početnike</li>
+                                <li>Stabilno i dobro optimiyovano</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> GNOME je odličan ako želiš jednostavan sistem koji "samo radi", bez previše distrakcija.
+                            </p>
+                            <hr>
+                            <h4>KDE Plasma(Kubuntu)</h4>
+                            <p>
+                                <strong>KDE Plasma</strong> je moderno i veoma prilagodljivo radno okruženje.
+                            </p>
+                            <ul>
+                                <li>Vizuelno veoma atraktivno</li>
+                                <li>Ogroman broj opcija za prilagođavanje</li>
+                                <li>Podseća na klasičan Windows izgled</li>
+                                <li>Može da koristi malo više resursa</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Idealno je za korisnike koji vole da prilagode svaki detalj sistema.
+                            </p>
+                            <hr>
+                            <h4>XFCE (Xubuntu)</h4>
+                            <p>
+                                <strong>XFCE</strong> je lagano i brzo radno okruženje.
+                            </p>
+                            <ul>
+                                <li>Odlično za starije računare</li>
+                                <li>Stabilno i jednostavno</li>
+                                <li>Manje vizuelnih efekata</li>
+                                <li>Fokusirano na brzinu</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ako ti je važna brzina i stabilnost, XFCE je odličan izbor.
+                            </p>
+                            <hr>
+                            <h4>LXQt (Lubuntu)</h4>
+                            <p>
+                                <strong>LXQt</strong> je jedan od najlakših radnih okruženja.
+                            </p>
+                            <ul>
+                                <li>Troši veoma malo resursa</li>
+                                <li>Idealno za vrlo stare računare</li>
+                                <li>Jednostavno i funkcionalno</li>
+                                <li>Minimalan izgled</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Preporučuje se ako imaš slab hardver ili želiš maksimalne performanse.
+                            </p>
+                            <hr>
+                            <h4>MATE (Ubuntu MATE)</h4>
+                            <p>
+                                <strong>MATE</strong> je klasično radno okruženje koje podseća na starije verzije <strong>GNOME-a</strong>.
+                            </p>
+                            <ul>
+                                <li>Tradicionalan izgled</li>
+                                <li>Jednostavno za korišćenje</li>
+                                <li>Stabilno i pregledno</li>
+                                <li>Dobro za korisnike koji vole "old school" stil</li>
+                            </ul>
+                            <hr>
+                            <h4>Budgie (Ubuntu Budgie)</h4>
+                            <p>
+                                <strong>Budgie</strong> je moderno i elegantno radno okruženje.
+                            </p>
+                            <ul>
+                                <li>Minimalistički i lep dizajn</li>
+                                <li>Jednostavno za korišćenje</li>
+                                <li>Dobar balans između izgleda i performansi</li>
+                                <li>Prijatan za nove korisnike</li>
+                            </ul>
+                            <hr>
+                            <h4>Koje radno okruženje izabrati?</h4>
+                            <ul>
+                                <li>Ako želiš <strong>jednostavno i moderno</strong> - <strong>GNOME</strong></li>
+                                <li>Ako voliš <strong>mnogo opcija i lep dizajn</strong> - <strong>KDE Plasma</strong></li>
+                                <li>Ako imaš <strong>stariji računar</strong> - <strong>HFCE ili LQXt</strong></li>
+                                <li>Ako voliš <strong>klasičan izgled</strong> - <strong>MATE</strong></li>
+                                <li>Ako želiš <strong>moderan, ali lagan sistem</strong> - <strong>Budgie</strong></li>
+                            </ul>
+                             <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Radno okruženje možeš promeniti i kasnije, tako da nema pogrešnog izbora - sve zavisi od tvojih navika i ukusa.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="softwer">
+                            <h4>Softwer i aplikacije</h4>
+                            <p>
+                                Ubuntu dolazi sa velikim brojem unapred instaliranih aplikacija koje pokrivaju osnovne potrebe većine korisnika.
+                                Sve je spremno za rad odmah nakon instalacije, bez dodatnih komplikacija.
+                            </p>
+                            <h4>Unapred instalirane aplikacije</h4>
+                            <p>
+                                Nakon instalacije Ubuntu-a, dobijaš osnovni set programa:
+                            </p>
+                            <ul>
+                                <li><strong>Web pregledač</strong> - Firefox</li>
+                                <li><strong>Kancelarijski paket</strong> - LibreOffice (Writer, Calc, Impress)</li>
+                                <li><strong>E-mail klijent</strong> - Thunderbird (u nekim verzijama)</li>
+                                <li><strong>Video i audio plejeri</strong> - za svakodnevno korišćenje</li>
+                                <li><strong>Osnovni alati</strong> - kalkulator, tekst editor, upravljanje fajlovima</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ovi programi su potpuno besplatni i dovoljni za većinu svakodnevnih zadataka.
+                            </p>
+                            <hr>
+                            <h4>Ubuntu Software (Software Center)</h4>
+                            <p>
+                                Ubuntu ima svoj <strong>Software Center</strong>, grafičku prodavnicu aplikacija koja je veoma laka za koriščenje.
+                            </p>
+                            <ul>
+                                <li>Instalacija programa jednim klikom</li>
+                                <li>Bez potrebe za terminalom</li>
+                                <li>Automatska ažuriranja</li>
+                                <li>Provereni i bezbedni programi</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Idealno rešenje za početnike koji žele jednostavan način instalacije softvera.
+                            </p>
+                            <hr>
+                            <h4>Snap, APT i Flatpak</h4>
+                            <p>
+                                Ubuntu podržava više načina instalacije aplikacija:
+                            </p>
+                            <ul>
+                                <li><strong>APT</strong> - klasičan način instalacije preko repozitorijuma</li>
+                                <li><strong>Snap</strong> - aplikacije koje dolaze sa svim potrebnim zavisnostima</li>
+                                <li><strong>Flatpak</strong> - alternativni format koji nudi dodatni izbor aplikacija</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Početnicima je dovoljno da znaju da sve ovo funkcioniše u pozadini, a oni mogu koristiti Software Center bez razmisljanja o detaljima.
+                            </p>
+                            <hr>
+                            <h4>Zamena za popularne programe</h4>
+                            <p>
+                                Na Ubuntu postoje alternative za skoro sve popularne programe:
+                            </p>
+                            <ul>
+                                <li>Microsoft Office - <strong>LibreOffice</strong></li>
+                                <li>Photoshop - <strong>GIMP</strong></li>
+                                <li>Adobe Illustrator - <strong>Inkscape</strong></li>
+                                <li>Window Media Player - <strong>VLC</strong></li>
+                                <li>Notepad - <strong>Gedit/Text Editor</strong></li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> To znači da možeš raditi gotovo sve isto kao an drugim operativnim sistemima.
+                            </p>
+                            <hr>
+                            <h4>Softver za programiranje i učenje</h4>
+                            <p>
+                                Ubuntu je veoma popularan među programerima i studentima:
+                            </p>
+                            <ul>
+                                <li>Podrška za Python, Java, C/C++, JavaScript i druge jezike</li>
+                                <li>Laka instalacija alata i okruženja</li>
+                                <li>Veliki broj besplatnih razvojnih alata</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Zbog toga se često koristi u školama, na fakultetima i u IT industriji.
+                            </p>
+                            <hr>
+                            <h4>Bezbednost i ažuriranja</h4>
+                            <p>
+                                Sve aplikacije i sostem se redovno ažuriraju kroz centralni sistem ažuriranja. Ovo znači:
+                            </p>
+                            <ul>
+                                <li>Viši nivo bezbednosti</li>
+                                <li>Manje problema sa kompatibilnošću</li>
+                                <li>Stabilniji sistem</li>
+                            </ul>
+                            <hr>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="bezbednost">
+                            <h4>Bezbednost i Ažuriranja</h4>
+                            <p>
+                                Jedna od velikih prednosti Ubuntu-a je to što je sistem bezbedan i redovno ažuriran. Većina stvari je podešena automatski, tako da korisnik ne mora da brine o detaljima.
+                            </p>
+                            <h4>Bezbednost sistema</h4>
+                            <p>
+                                Ubuntu je po svojoj prirodi bezbedan operativni sistem.
+                            </p>
+                            <ul>
+                                <li>Manje je izložen virusima i zlonamernom softveru</li>
+                                <li>Programi se instaliraju iz proverenih izvora</li>
+                                <li>Korisnik nema administratorska prava bez dozvole</li>
+                                <li>Sistem traži lozinku za važne promene</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Sve ovo dodatno štiti sistem od slučajnih grešaka i napada
+                            </p>
+                            <hr>
+                            <h4>Redovna ažuriranja</h4>
+                            <p>
+                                Ubuntu redovno dobija ažuriranja koja poboljšsavaju bezbednost i stabilnost sistema.
+                            </p>
+                            <ul>
+                                <li>Bezbednosne zakrpe se isporučuju brzo</li>
+                                <li>Ispravljaju se greške u sistemu i aplikacijama</li>
+                                <li>Ažuriranja su centralizovana i jednostavna</li>
+                            </ul>
+                            <hr>
+                            <h4>Automatska ažuriranja</h4>
+                            <p>
+                                Ubuntu omogućava automatska ažuriranja, što je posebno korisno za početnike.
+                            </p>
+                            <ul>
+                                <li>Sistem sam preuzima važne zakrpe</li>
+                                <li>Korisnik dobija obaveštenje kada je potrebno ponovno pokretanje</li>
+                                <li>Manje briga oko održavanja sistema</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Na ovaj način sistem ostaje bezbedan bez stalnog ručnog proveravanja.
+                            </p>
+                            <hr>
+                            <h4>LTS verzije i dugoročna bezbednost</h4>
+                            <p>
+                                LTS verzije Ubuntu-a imaju dugoročnu podršku (5 godina)
+                            </p>
+                            <ul>
+                                <li>Redovna bezbedonosna ažuriranja tokom celog perioda</li>
+                                <li>Stabilnost bez potrebe za čestim nadogradnjama</li>
+                                <li>Idealno za početnike i svakodnevnu upotrebu</li>
+                            </ul>
+                            <hr>
+                            <h4>Antivirus - da li je potreban?</h4>
+                            <p>
+                                Za većinu kućnih korisnika <strong>antivirus nije neophodan</strong>, ali:
+                            </p>
+                            <ul>
+                                <li>Uvek je važno instalirati programe iz pouzdanih izvora</li>
+                                <li>Redovno ažurirati sistem</li>
+                                <li>Ne koristiti sumnjive fajlove</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ubuntu već ima snažne bezbednosne mehanizme koji štite sistem.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="zajednica">
+                            <h4>Zajednica i podrška</h4>
+                            <p>
+                                Jedna od najvećih snaga Ubuntu-a je njegova ogromna zajednica korisnika širom sveta. Bez obzira da li si početnik ili napredniji korisnik, pomoć je skoro uvek lako dostupna.
+                            </p>
+                            <h4>Velika i aktivna zajednica</h4>
+                            <p>
+                                Ubuntu koristi milioni ljudi, što znači da:
+                            </p>
+                            <ul>
+                                <li>Gotovo svaki problem već ima rešenje</li>
+                                <li>Postoje forumi, blogovi i tutorijali za sve nivoe znanja</li>
+                                <li>Mnogo korisnika rado pomaže početnicima</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Zbog toga Ubuntu važi za jednu od najpristupačnijih Linux distribucija.
+                            </p>
+                            <hr>
+                            <h4>Zvanična dokumentacija</h4>
+                            <p>
+                                Ubuntu ima veoma dobru zvaničnu dokumentaciju.
+                            </p>
+                            <ul>
+                                <li>Jasno objašnjeni osnovni i napredni koraci</li>
+                                <li>Redovno ažurirana</li>
+                                <li>Pogodna za samostalno učenje</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Dokumentacija je često prvi korak kada tražiš pouzdane informacije.
+                            </p>
+                            <hr>
+                            <h4>Forumi i online pomoć</h4>
+                            <p>
+                                Ako naiđeš na problem, velika je šansa da je neko već imao isto pitanje.
+                            </p>
+                            <ul>
+                                <li>Ubuntu forumi</li>
+                                <li>Ask Ubuntu</li>
+                                <li>Reddit i razne Linux zajednice</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Na ovim mestima možeš postaviti pitanje i dobiti konkretan odgovor.
+                            </p>
+                            <hr>
+                            <h4>Lokalna zajednica</h4>
+                            <p>
+                                Postoje i lokalne Linux i Ubuntu zajednice, uključujući forume, grupe i okupljanja.
+                            </p>
+                            <ul>
+                                <li>Pomoć na maternjem jeziku</li>
+                                <li>Razmena iskustava</li>
+                                <li>Podrška za početnike</li>
+                            </ul>
+                            <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ovo je odličan način da brže naučiš i upoznaš ljude sa sličnim interesovanjima.
+                            </p>
+                            <hr>
+                            <h4>Plaćena podrška (za poslovne korisnike)</h4>
+                            <p>
+                                Za firme i profesionalnu upotrebu postoji i zvanična plaćena podrška.
+                            </p>
+                            <ul>
+                                <li>Namenjena serverima i poslovnim sistemima</li>
+                                <li>Profesionalna tehnička pomoć</li>
+                                <li>Dugoročna stabilnost i sigurnost</li>
+                            </ul>
+                            <hr>
+                            <h4>Zašto je zajednica važna za početnike?</h4>
+                            <p>
+                                Kada tek ulaziš u svet Linuxa, važno je da znaš da:
+                            </p>
+                            <ul>
+                                <li>Nisi sam</li>
+                                <li>Pitanja su dobrodošla</li>
+                                <li>Rešenja su dostupna</li>
+                            </ul>
+                             <p class="mt-3 fs-6 fst-italic">
+                                <strong>Napomena:</strong> Ubuntu zajednica je jedna od najprijateljskijih i najotvorenijih u Linux svetu.
+                            </p>
+                            <hr>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                        </div>
+
+                        <div class="tab-pane fade" id="pitanja">
+                            
+                            <div class="accordion" id="accordionExample">
+                                <h4>Pitanja i odgovori</h4>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <p>
+                                            <strong>1. Da li je Ubuntu besplatan?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>DA</strong>. Ubuntu je potpuno besplatan operativni sistem. Možeš ga preuzeti, koristiti i instalirati na koliko god računara želiš, bez ikakvih troškova.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <p>
+                                            <strong>2. Da li je Ubuntu dobar za početnike?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>DA</strong>. Ubuntu je jedan od najboljih izbora za početnike u svetu Linuxa. Jednostavan je za korišćenje, ima dobru dokumentaciju i veliku zajednicu koja pomaže novim korisnicima.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <p>
+                                            <strong>3. Da li mogu da koristim Ubuntu umesto Windowsa?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            U većini slučajeva - da. Ubuntu može da zameni Windows za svakodnevne zadatke kao što su internet, kancelarijski rad, multimedija i programiranje. 
+                                            Postoje alternative za većinu popularnih Windows programa.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <p>
+                                            <strong>4. Da li mogu da koristim Ubuntu pored Windowsa?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Da</strong>. Ubuntu se može instalirati zajedno sa Windows-om (dual boot), tako da prilikom paljenja računara biraš koji sistem želiš da pokreneš.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <p>
+                                            <strong>5. Da li su programi na Ubuntu besplatni?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Većina programa jeste besplatna i otvorenog koda. Postoje i komercijalne aplikacije, ali za većinu korisnika besplatni softver je više nego dovoljan.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <p>
+                                            <strong>6. Da li mi je potreban antivirus?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Za većinu kućnih korisnika antivirus nije neophodan. Ubuntu je bezbedan sistem, a redovna ažuriranja i instalacija programa iz pouzdanih izvora pružaju dobru zaštitu.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        <p>
+                                            <strong>7. Da li Ubuntu radi na starijim računarima?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Da</strong>. Ubuntu može da radi i na starijem hardveru, naročito ako koristiš laganije verzije kao što su Lubuntu ili Xubuntu.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        <p>
+                                            <strong>8. Da li moram da koristim terminal?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <strong>Ne</strong>. Većina osnovnih stvari može se obaviti kroz grafički interfejs. Terminal je moćan alat, ali nije obavezan za početnike.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        <p>
+                                            <strong>9. Šta ako nešto ne radi?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            U tom slučaju možeš potražiti pomoć u zajednici, na forumima ili u dokumentaciji. Velika je verovatnoća da je neko već imao isti problem i pronašao rešenje.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        <p>
+                                            <strong>10. Da li je Ubuntu težak za početnike?</strong>
+                                        </p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Ubuntu nije težak za početnike, jer nudi jednostavan grafički interfejs, dobru dokumentaciju i veliku zajednicu koja pruža podršku korisnicima.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#top" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"><i class="bi bi-arrow-up-square fs-1"></i></a>
+                            
+                        </div>
+                    </div>
+                    
+                </main>
+            </div>
+        </div>
+        <!--Tabs/Pane-->
+        <!--Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Šabac
+                            <br />
+                            15000
+                            <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45321.530063269056!2d19.638790483094247!3d44.768660981005254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475bcae3dfdcb3cd%3A0x73a997a93228cdf2!2z0KjQsNCx0LDRhg!5e0!3m2!1ssr!2srs!4v1769966968881!5m2!1ssr!2srs" 
+                            width="400" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/dejanjankovic_/" target="_blank"><i class="fab fa-fw fa-square-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/dejan.jankovic.874580" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/@Jankovic_12345" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">O SAJTU</h4>
+                        <p class="lead mb-0">
+                            Nov si u Linuxu! Na pravom si mestu. Prvi koraci ne moraju biti teški. Ovde ćeš pronaći jasne vodiče, savete i primere koji će ti pomoći da sa sigurnošću započneš. <br /> <br />
+                            Ovaj sajt je namenjen novim Linux korisnicima, sa ciljem da im pomogne da lakše naprave svoje prve korake i upoznaju se sa open-source svetom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer-->
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Dejan Janković 2026. All right reserved</small></div>
+        </div>
+        <!-- End Copyright Section-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>  
+</body>
+</html>
