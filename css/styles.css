@@ -11070,7 +11070,6 @@ section {
 }
 
 /* Distribution guide dropdown premena boje hover */
-
 /* Ubuntu - narandžasto ljubičasta */
 .dropdown-item.ubuntu:hover {
     background-color: #E95420; /* Ubuntu narandžasta */
@@ -11093,8 +11092,8 @@ section {
 }
 /* Pop OS - ljubicasta */
 .dropdown-item.pop:hover {
-    background-color: #5E2750;
-    color: white;
+    background-color: var(--bs-black, #000);
+    color: var(--bs-white, #fff);
 }
 /* Prelaz (transition) kada se hoveruje u drop down meniju */
 .dropdown-item {
@@ -11130,8 +11129,9 @@ body.ubuntu header h1{
 #ubuntu-tabs .nav-link {
     color: #000000; /* crna slova */
     background-color: transparent; /* pozadina ostaje bela/providna */
-    border: 1px solid #ccc; /* da tabovi imaju ivicu */
-    transition: 0.3s; /* glatki prelaz boja */
+    border: 3px solid #ccc; /* da tabovi imaju ivicu */
+    border-radius: 15px;
+    transition: all 0.3s ease; /* glatki prelaz boja */
 }
 /* Hover efekat - pozadina u boji Ubuntua, slova bela */
 #ubuntu-tabs .nav-link:hover {
@@ -11185,8 +11185,9 @@ body.linux_mint .tab-pane h4 {
 #linux_mint-tabs .nav-link {
     color: #000000; /* crna slova */
     background-color: transparent; /* pozadina ostaje bela/providna */
-    border: 1px solid #ccc; /* da tabovi imaju ivicu */
-    transition: 0.3s; /* glatki prelaz boja */
+    border: 3px solid #ccc; /* da tabovi imaju ivicu */
+    border-radius: 15px;
+    transition: all 0.3s ease; /* glatki prelaz boja */
 }
 /* Aktivna kartica - ostaje Linux mint zelena */
 #linux_mint-tabs .nav-link.active {
@@ -11230,8 +11231,9 @@ body.zorin_os .tab-pane h4 {
 #zorin_os-tabs .nav-link {
     color: #000000; /* crna slova */
     background-color: transparent; /* pozadina ostaje bela/providna */
-    border: 1px solid #ccc; /* da tabovi imaju ivicu */
-    transition: 0.3s; /* glatki prelaz boja */
+    border: 3px solid #ccc; /* da tabovi imaju ivicu */
+    border-radius: 15px;
+    transition: all 0.3s ease; /* glatki prelaz boja */
 }
 /* Aktivna kartica - ostaje Zorin OS plava */
 #zorin_os-tabs .nav-link.active {
@@ -11275,8 +11277,9 @@ body.elementary .tab-pane h4 {
 #elementary-tabs .nav-link {
     color: #000000; /* crna slova */
     background-color: transparent; /* pozadina ostaje bela/providna */
-    border: 1px solid #ccc; /* da tabovi imaju ivicu */
-    transition: 0.3s; /* glatki prelaz boja */
+    border: 3px solid #ccc; /* da tabovi imaju ivicu */
+    border-radius: 15px;
+    transition: all 0.3s ease; /* glatki prelaz boja */
 }
 /* Aktivna kartica - ostaje elementary OS ljubicasta */
 #elementary-tabs .nav-link.active {
@@ -11300,6 +11303,50 @@ body.elementary #pitanja .accordion-body {
 }
 
 
+
+/* Pop OS stranica */
+/* Naslov pop OS */
+body.pop_os header h1{
+  color: var(--bs-black, #000);
+}
+/* Naslovi i sadržaj na pop OS stranici */
+body.pop_os .tab-pane h4 {
+    color: var(--bs-black, #000);
+    font-weight: 600;
+}
+/* Hover efekat - pozadina u boji pop OS, slova bela */
+#pop_os-tabs .nav-link:hover {
+    background-color: var(--bs-black, #000);
+    color: #FFFFFF; /* slova postaju bela */
+}
+/* Svi tabovi - tekst crn pop OS stranica */
+#pop_os-tabs .nav-link {
+    color: #000000; /* crna slova */
+    background-color: transparent; /* pozadina ostaje bela/providna */
+    border: 3px solid #ccc; /* da tabovi imaju ivicu */
+    border-radius: 15px;
+    transition: all 0.3s ease; /* glatki prelaz boja */
+}
+/* Aktivna kartica - ostaje pop OS crna */
+#pop_os-tabs .nav-link.active {
+    background-color: var(--bs-black, #000); /* pop OS crna */
+    color: #FFFFFF; /* bela slova */
+}
+/* Accordion za pop OS */
+body.pop_os #pitanja .accordion-button:not(.collapsed) {
+  background-color: var(--bs-black, #000);
+  color: var(--bs-white, #fff);
+  box-shadow: none;
+}
+/* Hover samo kad je ZATVOREN */
+body.pop_os #pitanja .accordion-button.collapsed:hover {
+  background-color: var(--bs-black, #000);
+  color: var(--bs-white, #fff);
+}
+/* Background odgovori elementary OS */
+body.pop_os #pitanja .accordion-body {
+  background-color: var(--bs-gray-300, #adb5bd);
+}
 
 
 
