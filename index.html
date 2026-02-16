@@ -177,7 +177,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Pošalji poruku za obuku</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Kontaktiraj me</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -194,31 +194,31 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form action="https://formspree.io/f/xkovbbnd" method="POST" id="contactForm" class="needs-validation" novalidate>
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
                                 <label for="name">Ime</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <div class="invalid-feedback">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required />
                                 <label for="email">Email adresa</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <div class="invalid-feedback">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" pattern="^\+?\d{0,3}?[\s.-]?\(?\d{2,4}\)?[\s.-]?\d{3,4}[\s.-]?\d{3,4}$" />
                                 <label for="phone">Broj telefona</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <div class="invalid-feedback">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                                 <label for="message">Poruka</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <div class="invalid-feedback">A message is required.</div>
                             </div>
                             <!-- Submit success message-->
                             <!---->
@@ -237,7 +237,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Posalji</button>
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Posalji</button>
                         </form>
                     </div>
                 </div>
@@ -274,9 +274,9 @@
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
 
                         <p class="mt-5 fs-4 fw-semibold">
-                            Ako imaš pitanje o Linuxu ili želiš savet, kontaktiraj me: <br />
+                            Imaš pitanje u vezi sa Linuxom ili ti je potreban savet? <br /><br />
                             E-mail: <a href="mailto:dejan.sbc@proton.me" class="text-decoration-underline text-light fw-bold">dejan.sbc@proton.me</a> <br /><br />
-                            Ili popuni <a href="#contactForm" class="text-decoration-underline text-light fw-bold">FORMU</a>
+                            Ili pošalji poruku putem <a href="#contactForm" class="text-decoration-underline text-light fw-bold"> FORME</a>
                         </p>
                     </div>
                     <!-- Footer About Text-->

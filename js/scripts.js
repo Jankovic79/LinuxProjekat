@@ -65,3 +65,60 @@ document.querySelectorAll('#navbarResponsive .nav-link').forEach(link => {
     });
 });
 
+
+// JS za kontakt formu
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault(); // sprečava reload stranice
+
+        // HTML5 validacija
+        if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+        }
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            const successDiv = document.getElementById('submitSuccessMessage');
+            const errorDiv = document.getElementById('submitErrorMessage');
+
+            if (response.ok) {
+                // Success
+                successDiv.classList.remove('d-none');
+                errorDiv.classList.add('d-none');
+
+                form.reset();
+                form.classList.remove('was-validated');
+
+                // Automatski sakrij success poruku posle 5 sekundi
+                setTimeout(() => successDiv.classList.add('d-none'), 5000);
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        } catch (error) {
+            // Error
+            const errorDiv = document.getElementById('submitErrorMessage');
+            const successDiv = document.getElementById('submitSuccessMessage');
+
+            errorDiv.classList.remove('d-none');
+            successDiv.classList.add('d-none');
+
+            // Automatski sakrij error poruku posle 5 sekundi
+            setTimeout(() => errorDiv.classList.add('d-none'), 5000);
+        }
+    });
+});
+
+
+
