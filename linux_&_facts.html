@@ -15,9 +15,11 @@
             <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
             <!-- Core theme CSS (includes Bootstrap)-->
             <link href="css/styles.css" rel="stylesheet" />
+            <!-- Bootstrap icons -->
+             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <title>Linux & Facts</title>
     </head>
-    <body>
+    <body id="top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase sticky-top" id="mainNav">
                 <div class="container">
@@ -58,7 +60,7 @@
 
         <!-- Header-->
         <header class="text-center fs-1 mt-5">
-            <h1 class="fs-1 fw-semibold text-uppercase">istorija linuxa: od linusovog projekta do globalnog fenomena</h1>
+            <h1 class="fs-1 fw-semibold">Linux-kompletan vodič kroz istoriju, primenu i značaj</h1>
             <figure class="text-center">
                 <blockquote class="blockquote">   
                     <p class="fs-5 fst-italic">"Talk is cheap. Show me the code."</p>
@@ -73,37 +75,47 @@
         <!-- Section for Linux history and facts-->
             <div class="container">
                 <section id="linux-history" class="mt-5 mb-5">
-                    <p class="lead fs-5" style="text-align: justify;">
-                        Linux je danas jedan od najpopularnijih operativnih sistema na svetu, ali njegova priča počinje još 1991. godine, kada je finski student Linus Torvalds započeo rad na svom ličnom projektu. Cilj mu je bio da stvori besplatan i otvoren operativni sistem, zasnovan na Unixu, koji bi bio dostupan svima i omogućavao slobodu u korišćenju, proučavanju i modifikovanju softvera.
+                    <p class="lead">
+                        <strong>Linux</strong> je danas jedan od najpopularnijih operativnih sistema na svetu, ali njegova priča počinje još 1991. godine, 
+                        kada je finski student Linus Torvalds započeo rad na svom ličnom projektu. Cilj mu je bio da stvori besplatan i otvoren operativni sistem, 
+                        inspirisan na Unixu, koji bi bio dostupan svima i omogućavao slobodu u korišćenju, proučavanju i modifikovanju softvera.
                     </p>
-                    <br>
-
-                    <h2 class="fs-3 fw-semibold">Početak Linux kernela</h2>
-                    <p class="lead fs-5" style="text-align: justify;">
-                        Prva verzija Linux kernela objavljena je 17. septembra 1991. godine. U početku, kernel je bio jednostavan i podržavao je ograničen broj hardverskih uređaja, ali je njegova otvorena arhitektura omogućila brz razvoj zahvaljujući doprinosima programera iz celog sveta. Ovaj princip otvorenog koda (open-source) i danas je temelj Linuxa.
+                    <h2 class="fs-2 fw-semibold">Početak Linux kernela</h2>
+                    <p class="fs-6">
+                        Dana 17. septembra 1991. objavljena je prva verzija Linux kernela (0.01). 
+                        U početku je podržavao samo x86 arhitekturu i imao ograničene mogućnosti, ali je bio otvorenog koda.
+                        Godine 1992. Linux prelazi na GNU GPL licencu, čime postaje slobodan softver i omogućava globalnu saradnju programera.
                     </p>
-                    <br>
-
-                    <h2 class="fs-3 fw-semibold">Povezanost sa GNU projektom</h2>
-                    <p class="lead fs-5" style="text-align: justify;">
-                        Linux nije nastao izolovano. GNU projekat, koji je pokrenuo Richard Stallman sredinom 1980-ih, obezbeđivao je slobodne alate i programe, ali mu je nedostajao kernel. Kombinacija GNU softvera i Linux kernela stvorila je prvi potpuno funkcionalan slobodan operativni sistem, poznat danas kao GNU/Linux.
+                    <h2 class="fs-2 fw-semibold">GNU projekat i GNU/Linux</h2>
+                    <p class="fs-6">
+                        Još sredinom 1980-ih, Richard Stallman pokrenuo je GNU projekat. GNU je obezbedio ključne alate (GCC, Bash, biblioteke), dok je Linux obezbedio kernel.
+                        Zajedno su formirali kompletan operativni sistem poznat kao GNU/Linux.
                     </p>
-                    <br>
-
-                    <h2 class="fs-3 fw-semibold">Razvoj i popularizacija</h2>
-                    <p class="lead fs-5" style="text-align: justify;">
-                        Tokom 1990-ih, Linux distribucije poput Slackware, Debian i Red Hat počele su da privlače entuzijaste, obrazovne institucije i istraživačke laboratorije. Njegova stabilnost i fleksibilnost učinile su ga idealnim za servere i mrežnu infrastrukturu. Svaka distribucija nudila je jedinstvene alate i pakete, omogućavajući korisnicima da izaberu verziju koja najbolje odgovara njihovim potrebama.
+                    <h2 class="fs-2 fw-semibold">Prve distribucije</h2>
+                    <p class="fs-6">
+                        Tokom 1990-ih pojavile su se prve distribucije:
                     </p>
-                    <br>
-
-                    <h2 class="fs-3 fw-semibold">Linux u modernom svetu</h2>
-                    <p class="lead fs-5" style="text-align: justify;">
-                        Od 2000-ih, Linux je postao ključni deo profesionalnog IT sveta. Milioni servera, superračunara i uređaja zasnovanih na Linuxu, uključujući mobilne telefone sa Androidom, koriste ovaj operativni sistem. Aktivna zajednica i stalni razvoj omogućili su Linuxu da se brzo prilagođava modernim tehnologijama i bezbednosnim standardima.
+                    <ul>
+                        <li><strong>Slackware</strong></li>
+                        <li><strong>Debian</strong></li>
+                        <li><strong>Red Hat Linux</strong></li>
+                    </ul>
+                    <p class="fs-6">
+                        One su omogućile lakšu instalaciju i širu primenu sistema
                     </p>
-                    <br>
-
-                    <h2 class="fs-3 fw-semibold">Zašto je Linux važan</h2>
-                    <p class="lead fs-5" style="text-align: justify;">
+                    <h2 class="fs-2 fw-semibold">Razvoj i popularizacija</h2>
+                    <p class="fs-6">
+                        Tokom 1990-ih, Linux distribucije poput Slackware, Debian i Red Hat počele su da privlače entuzijaste, obrazovne institucije i istraživačke laboratorije. 
+                        Njegova stabilnost i fleksibilnost učinile su ga idealnim za servere i mrežnu infrastrukturu. Svaka distribucija nudila je jedinstvene alate i pakete, 
+                        omogućavajući korisnicima da izaberu verziju koja najbolje odgovara njihovim potrebama.
+                    </p>
+                    <h2 class="fs-2 fw-semibold">Linux u modernom svetu</h2>
+                    <p class="fs-6">
+                        Od 2000-ih, Linux je postao ključni deo profesionalnog IT sveta. Milioni servera, superračunara i uređaja zasnovanih na Linuxu, uključujući mobilne telefone sa Androidom, 
+                        koriste ovaj operativni sistem. Aktivna zajednica i stalni razvoj omogućili su Linuxu da se brzo prilagođava modernim tehnologijama i bezbednosnim standardima.
+                    </p>
+                    <h2 class="fs-2 fw-semibold">Zašto je Linux važan?</h2>
+                    <p class="fs-6">
                         Danas, Linux nije samo operativni sistem - on je simbol slobodnog softvera i saradnje. Zajednica programera širom sveta nastavlja da razvija kernel i distribucije, čineći Linux pouzdanim i fleksibilnim rešenjem za sve, od kućnih računara do globalnih servera i cloud infrastrukture.
                         Istorija Linuxa pokazuje kako vizija jednog studenta može promeniti ceo tehnološki svet. Otvoreni kod, zajednički razvoj i sloboda korišćenja i dalje ostaju ključni principi koji Linux čine jedinstvenim.
                     </p>
@@ -111,32 +123,63 @@
 
                 <!--Zanimljivosti o linuxu i pregled distribucija-->
                 <section id="linux-facts" class="mt-5 mb-5">
-                    <h2 class="fs-3 fw-semibold text-center">Zanimljivosti o Linuxu</h2>
-                    <br />
-                    <ul class="list-group list-group-flush fs-5">
-                        <li class="list-group-item"><strong>Prvi Linux kernel</strong> bio je manji od 10.000 linija koda.</li>
-                        <li class="list-group-item"><strong>Android</strong>, najpopularniji mobilni OS, zasnovan je na Linuxu.</li>
-                        <li class="list-group-item"><strong>Više od 70% internet servera</strong> radi na Linuxu.</li>
-                        <li class="list-group-item">Linux pokreće skoro sve <strong>superračunare</strong> na svetu.</li>
+                    <h2 class="fs-2 fw-semibold text-center">Zanimljive činjenice o Linuxu</h2>
+                    <ul class="list-group list-group-flush fs-6">
+                        <li class="list-group-item"><strong>Linux pokreće superračunare</strong><br /> Svi najmoćniji superračunari na svetu koriste Linux, 
+                            uključujući <a href="https://www.olcf.ornl.gov/frontier/" class="link-info" target="_blank">FRONTIER SUPERCOMPUTER</a></li>
+                        <li class="list-group-item"><strong>Android je zasnovan na Linuxu</strong> <br>Operativni sistem Android koristi Linux kernel i pokreće milijarde mobilnih uređaja.</li>
+                        <li class="list-group-item"><strong>Git je nastao zbog Linuxa</strong><br>Sistem za verzionisanje Git razvio je Linus Torvalds kako bi olakšao razvoj Linux kernela.</li>
                         <li class="list-group-item"><strong>Linus Torvalds</strong> i dalje vodi razvoj linux kernela uz pomoć globalne zajednice.</li>
+                        <li class="list-group-item"><strong>Velike kompanije ulažu u Linux</strong><br>Kompanije poput IBM, Intel i Google aktivno doprinose razvoju Linuxa.</li>
                     </ul>
-                    <br /><br />
-
-                    <h2 class="fs-3 fw-semibold text-center">Kratak pregled najpopularnijix Linux distribucija</h2>
-                    <p class="lead fs-5 text-center" style="text-align: justify;">
-                        Postoji mnogo <strong>Linux distribucija</strong>, a svaka ima svoje prednosti i ciljnu publiku. Neke od najpoznatijih su:
+                    <hr>
+                    <h2 class="fs-2 fw-semibold text-center">Najpoznatije Linux distribucije</h2>
+                    <p class="fs-6 text-center">
+                        Linux postoji u obliku različitih distribucija, prilagođenih različitim potrebama.
                     </p>
-                    <br />
-                    <ul class="list-group list-group-flush fs-5">
+                    <ul class="list-group list-group-flush fs-6">
                         <li class="list-group-item"><strong>Ubuntu</strong> - najpopularnija distribucija za desktop korisnike, jednostavna za instalaciju i upotrebu.</li>
                         <li class="list-group-item"><strong>Debian</strong> - poznata po stabilnosti, često se koristi za servere.</li>
-                        <li class="list-group-item"><strong>Fedora</strong> - cutting-edge distribucija, često uvodi nove tehnoligije.</li>
-                        <li class="list-group-item"><strong>Arch Linux</strong> - minimalistička distribucija za napredne korisnike koji žele potpunu kontrolu.</li>
+                        <li class="list-group-item"><strong>Fedora</strong> - moderan i inovativan.</li>
+                        <li class="list-group-item"><strong>Arch Linux</strong> - za nepredne korisnike.</li>
                         <li class="list-group-item"><strong>Red Hat Enterprise Linux (RHEL)</strong> - komercijalna distribucija za profesionalne servere i korporativne sisteme.</li>
                     </ul>
-                    <p class="mt-3 fs-6 fst-italic">
-                        Napomena: Ovo je samo kratak pregled. Svaka distribucija ima svoju zajednicu, paket menadžer i specifične prednosti.
+                    <p class="fw-bold fs-6">
+                        Svaka distribucija ima sopstveni paket menadžer, filozofiju i ciljnu grupu korisnika.
                     </p>
+                    <hr>
+                    <h2 class="fs-2 fw-semibold text-center">Gde se Linux koristi?</h2>
+                    <p class="fs-6">
+                        Linux je prisutan u gotovo svim segmentima moderne tehnologije:
+                    </p>
+                    <ul class="list-group list-group-flush fs-6">
+                        <li class="list-group-item"><i class="bi bi-globe me-2"></i> <strong>Web serveri (Apache, Nginx)</strong></li>
+                        <li class="list-group-item"><i class="bi bi-android2 me-2"></i><strong>Android telefoni</strong></li>
+                        <li class="list-group-item"><i class="bi bi-cloud-check me-2"></i><strong>Cloud infrastruktura (AWS, Azure, Google Cloud)</strong></li>
+                        <li class="list-group-item"><i class="bi bi-pc-display me-2"></i><strong>Superračunari</strong></li>
+                        <li class="list-group-item"><i class="bi bi-controller me-2"></i><strong>Steam Deck</strong></li>
+                        <li class="list-group-item"><i class="bi bi-rocket-takeoff me-2"></i><strong>Nasa i svemirske misije</strong></li>
+                        <li class="list-group-item"><i class="bi bi-router me-2"></i><strong>Ruteri</strong></li>
+                        <li class="list-group-item"><i class="bi bi-tv me-2"></i><strong>Smart TV</strong></li>
+                    </ul>
+                    <hr>
+                    <h2 class="fs-2 fw-semibold text-center">Prednost Linuxa u odnosu na druge sisteme?</h2>
+                    <ul class="list-group list-group-flush fs-6">
+                        <li class="list-group-item"><i class="bi bi-check-circle me-2"></i><strong>Open-source model</strong><br />Kod je dostupan svima, što povećava transparentnost i sigurnost.</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle me-2"></i><strong>Stabilnost</strong><br>Linux sistemi mogu raditi godinama bez restarta.</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle me-2"></i><strong>Bezbednost</strong><br>Zbog arhitekture i modela dozvola, Linux je otporniji na malware.</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle me-2"></i><strong>Fleksibilnost</strong>Može se prilagoditi od malih embedded uređaja do velikih data centara.</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle me-2"></i><strong>Zajednica i podrška</strong><br>Hiljade developera kontinuirano unapređuje sistem.</li>
+                    </ul>
+                    <hr>
+                    <h2 class="fs-2 fw-semibold text-center">Završni zaključak</h2>
+                    <p class="lead">
+                        Linux nije samo operativni sistem - on je globalni tehnološki projekat koji pokreće internet, mobilne uređaje, servere i superračunare.
+                        Od studentskog projekta Linus Torvalds-a, Linux je postao temelj savremene digitalne infrastrukture i simbol otvorenog softvera.
+                        Njegov razvoj i danas traje, uz podršku globalne zajednice i najvećih tehnoloških kompanija sveta.
+                    </p>
+                    <a href="#top" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover float-end mb-2"></strong><i class="bi bi-arrow-up-square fs-1"></i></a>
+                    <hr>
                 </section>
                 <!--Kraj zanimljivosti o linuxu i pregled distribucija-->
             </div>
@@ -171,7 +214,7 @@
                         <a class="btn btn-outline-light btn-social mx-1" href="https://x.com/@Jankovic_12345" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
                         
-                        <p class="mt-5 fs-4 fw-semibold">
+                        <p class="mt-5 lead fw-semibold">
                             Imaš pitanje u vezi sa Linuxom ili ti je potreban savet? <br /><br />
                             E-mail: <a href="mailto:dejan.sbc@proton.me" class="text-decoration-underline text-light fw-bold">dejan.sbc@proton.me</a> <br /><br />
                             Ili pošalji poruku putem <a href="index.html#contactForm" class="text-decoration-underline text-light fw-bold"> FORME</a>
