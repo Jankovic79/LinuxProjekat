@@ -6,4 +6,9 @@ Thumbs.db
 .idea/
 .vscode/
 *.log
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
 
