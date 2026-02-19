@@ -11347,6 +11347,14 @@ body.pop_os #pitanja .accordion-button.collapsed:hover {
 body.pop_os #pitanja .accordion-body {
   background-color: var(--bs-gray-300, #adb5bd);
 }
+/* Da se sajt ne pomera prilikom scroll-a na mobilnom */
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 
 
