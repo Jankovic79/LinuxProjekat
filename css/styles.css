@@ -11076,12 +11076,12 @@ section {
     color: white;
 }
 /* Linux Mint - zelena */
-.dropdown-item.linux_mint:hover {
+.dropdown-item.linux-mint:hover {
     background-color: #87CF4F;
     color: var(--bs-white, #fff);
 }
 /*Zorin OS plava*/
-.dropdown-item.zorin_os:hover{
+.dropdown-item.zorin-os:hover{
   background-color: var(--bs-cyan, #0dcaf0);
   color: var(--bs-white, #fff);
 }
@@ -11168,21 +11168,21 @@ body.ubuntu header h1{
 
 /* Linux Mint stranica */
 /* Naslov Linux Mint */
-body.linux_mint header h1{
+body.linux-mint header h1{
   color: var(--mint-green, #87CF3E);
 }
 /* Naslovi i sadržaj na Linux Mint stranici */
-body.linux_mint .tab-pane h4 {
+body.linux-mint .tab-pane h4 {
     color: var(--mint-green, #87CF3E);
     font-weight: 600;
 }
 /* Hover efekat - pozadina u boji Linux mint, slova bela */
-#linux_mint-tabs .nav-link:hover {
+#linux-mint-tabs .nav-link:hover {
     background-color: var(--mint-green, #87CF3E);
     color: #FFFFFF; /* slova postaju bela */
 }
 /* Svi tabovi - tekst crn Linux mint stranica */
-#linux_mint-tabs .nav-link {
+#linux-mint-tabs .nav-link {
     color: #000000; /* crna slova */
     background-color: transparent; /* pozadina ostaje bela/providna */
     border: 3px solid #ccc; /* da tabovi imaju ivicu */
@@ -11190,23 +11190,23 @@ body.linux_mint .tab-pane h4 {
     transition: all 0.3s ease; /* glatki prelaz boja */
 }
 /* Aktivna kartica - ostaje Linux mint zelena */
-#linux_mint-tabs .nav-link.active {
+#linux-mint-tabs .nav-link.active {
     background-color: var(--mint-green, #87CF3E); /* mint zelena */
     color: #FFFFFF; /* bela slova */
 }
 /* Accordion za Linux mint */
-body.linux_mint #pitanja .accordion-button:not(.collapsed) {
+body.linux-mint #pitanja .accordion-button:not(.collapsed) {
   background-color: var(--mint-green);
   color: var(--mint-text);
   box-shadow: none;
 }
 /* Hover samo kad je ZATVOREN */
-body.linux_mint #pitanja .accordion-button.collapsed:hover {
+body.linux-mint #pitanja .accordion-button.collapsed:hover {
   background-color: var(--mint-green-hover);
   color: var(--mint-text);
 }
 /* Background odgovori Linux mint */
-body.linux_mint #pitanja .accordion-body {
+body.linux-mint #pitanja .accordion-body {
   background-color: var(--mint-answer-bg, #E6F5D9);
 }
 
@@ -11214,21 +11214,21 @@ body.linux_mint #pitanja .accordion-body {
 
 /* Zorin OS stranica */
 /* Naslov Zorin OS */
-body.zorin_os header h1{
+body.zorin-os header h1{
   color: var( --bs-cyan, #0dcaf0);
 }
 /* Naslovi i sadržaj na Zorin OS stranici */
-body.zorin_os .tab-pane h4 {
+body.zorin-os .tab-pane h4 {
     color: var(--bs-cyan, #0dcaf0);
     font-weight: 600;
 }
 /* Hover efekat - pozadina u boji Zorin OS, slova bela */
-#zorin_os-tabs .nav-link:hover {
+#zorin-os-tabs .nav-link:hover {
     background-color: var(--bs-cyan, #0dcaf0);
     color: #FFFFFF; /* slova postaju bela */
 }
 /* Svi tabovi - tekst crn Zorin OS stranica */
-#zorin_os-tabs .nav-link {
+#zorin-os-tabs .nav-link {
     color: #000000; /* crna slova */
     background-color: transparent; /* pozadina ostaje bela/providna */
     border: 3px solid #ccc; /* da tabovi imaju ivicu */
@@ -11236,23 +11236,23 @@ body.zorin_os .tab-pane h4 {
     transition: all 0.3s ease; /* glatki prelaz boja */
 }
 /* Aktivna kartica - ostaje Zorin OS plava */
-#zorin_os-tabs .nav-link.active {
+#zorin-os-tabs .nav-link.active {
     background-color: var(--bs-cyan, #0dcaf0); /* Zorin OS plava */
     color: #FFFFFF; /* bela slova */
 }
 /* Accordion za Zorin OS */
-body.zorin_os #pitanja .accordion-button:not(.collapsed) {
+body.zorin-os #pitanja .accordion-button:not(.collapsed) {
   background-color: var(--bs-cyan, #0dcaf0);
   color: var(--mint-text);
   box-shadow: none;
 }
 /* Hover samo kad je ZATVOREN */
-body.zorin_os #pitanja .accordion-button.collapsed:hover {
+body.zorin-os #pitanja .accordion-button.collapsed:hover {
   background-color: var(--mint-green-hover);
   color: var(--mint-text);
 }
 /* Background odgovori zorin OS */
-body.zorin_os #pitanja .accordion-body {
+body.zorin-os #pitanja .accordion-body {
   background-color: #e6f2ff;
 }
 
@@ -11306,21 +11306,21 @@ body.elementary #pitanja .accordion-body {
 
 /* Pop OS stranica */
 /* Naslov pop OS */
-body.pop_os header h1{
+body.pop-os header h1{
   color: var(--bs-black, #000);
 }
 /* Naslovi i sadržaj na pop OS stranici */
-body.pop_os .tab-pane h4 {
+body.pop-os .tab-pane h4 {
     color: var(--bs-black, #000);
     font-weight: 600;
 }
 /* Hover efekat - pozadina u boji pop OS, slova bela */
-#pop_os-tabs .nav-link:hover {
+#pop-os-tabs .nav-link:hover {
     background-color: var(--bs-black, #000);
     color: #FFFFFF; /* slova postaju bela */
 }
 /* Svi tabovi - tekst crn pop OS stranica */
-#pop_os-tabs .nav-link {
+#pop-os-tabs .nav-link {
     color: #000000; /* crna slova */
     background-color: transparent; /* pozadina ostaje bela/providna */
     border: 3px solid #ccc; /* da tabovi imaju ivicu */
@@ -11328,23 +11328,23 @@ body.pop_os .tab-pane h4 {
     transition: all 0.3s ease; /* glatki prelaz boja */
 }
 /* Aktivna kartica - ostaje pop OS crna */
-#pop_os-tabs .nav-link.active {
+#pop-os-tabs .nav-link.active {
     background-color: var(--bs-black, #000); /* pop OS crna */
     color: #FFFFFF; /* bela slova */
 }
 /* Accordion za pop OS */
-body.pop_os #pitanja .accordion-button:not(.collapsed) {
+body.pop-os #pitanja .accordion-button:not(.collapsed) {
   background-color: var(--bs-black, #000);
   color: var(--bs-white, #fff);
   box-shadow: none;
 }
 /* Hover samo kad je ZATVOREN */
-body.pop_os #pitanja .accordion-button.collapsed:hover {
+body.pop-os #pitanja .accordion-button.collapsed:hover {
   background-color: var(--bs-black, #000);
   color: var(--bs-white, #fff);
 }
 /* Background odgovori elementary OS */
-body.pop_os #pitanja .accordion-body {
+body.pop-os #pitanja .accordion-body {
   background-color: var(--bs-gray-300, #adb5bd);
 }
 /* Da se sajt ne pomera prilikom scroll-a na mobilnom */
