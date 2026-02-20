@@ -1,0 +1,13 @@
+# robots.txt for startlinux.rs
+# Dozvoljava svim pretraživačima da indeksiraju sajt
+# i pokazuje gde je sitemap.xml
+
+User-agent: *
+Disallow:
+
+# Lokacija sitemap-a
+Sitemap: https://www.startlinux.rs/sitemap.xml
+
+# Ako u budućnosti budem imao stranice koje ne želim da indeksiram:
+# Disallow: /admin/
+# Disallow: /test/
