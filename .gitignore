@@ -1,14 +1,33 @@
+# OS privremeni fajlovi
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Node / JS
 node_modules/
 dist/
 build/
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
-*.log
+
+# Python
 venv/
 __pycache__/
 *.pyc
 *.pyo
 
+# Log i temp fajlovi
+*.log
+*.tmp
+*.swp
+*.bak
+*~
+
+# Ne pushovati build / output fajlove (ako ikada generišem)
+*.out
+*.exe
+*.class
 
