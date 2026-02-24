@@ -11360,12 +11360,18 @@ html, body {
   body {
     padding-top: 80px;
   }
+  .container:first-of-type{
+    margin-top: 40px;
+  }
 }
 
 /* Za mobilni i tablete */
 @media (max-width: 991px) {
   body {
     padding-top: 100px; /* veći razmak ako je navbar viši */
+  }
+  .container:first-of-type{
+    margin-top: 50px;
   }
 }
 
