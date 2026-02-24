@@ -11355,6 +11355,19 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Za desktop */
+@media (min-width: 992px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+/* Za mobilni i tablete */
+@media (max-width: 991px) {
+  body {
+    padding-top: 100px; /* veći razmak ako je navbar viši */
+  }
+}
 
 
 
