@@ -53,18 +53,18 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Dynamic title change based on navbar click
+        const siteName = "Start Linux";
+
+        document.querySelectorAll('#navbarResponsive .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const sectionName = link.textContent.trim();
+                document.title = `${siteName} - ${sectionName}`;
+            });
+        });
+
+
 });
-
-// Dynamic title change based on navbar click
-const siteName = "Start Linux";
-
-document.querySelectorAll('#navbarResponsive .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        const sectionName = link.textContent.trim();
-        document.title = `${siteName} - ${sectionName}`;
-    });
-});
-
 
 // JS za kontakt formu
 document.addEventListener('DOMContentLoaded', () => {
